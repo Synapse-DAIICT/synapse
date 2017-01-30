@@ -50,7 +50,7 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   var selectedCheckboxes = [];
 
-  $scope.closeModal = function() {
+  $scope.closeModal = function(modalID) {
 
     selectedCheckboxes = [];
 
@@ -88,6 +88,12 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
     //
       DashboardService.register(eventObj).then(function(response) {
         console.log('done');
+
+        var modalID = "#" + eventID;
+
+        $('modalID').modal('hide');
+
+        location.reload();
       });
     //
     // }
