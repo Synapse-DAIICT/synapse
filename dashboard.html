@@ -42,9 +42,9 @@
 </head>
 <body>
 <div class="container dashboard" ng-controller='DashboardController' ng-init='getEventList()'>
-    <!-- <a href="login.html">
-        <button class="btn btn-default" style="float:right;">LOG OUT</button>
-    </a> -->
+    <a>
+        <button class="btn btn-default" style="float:right;" ng-click="logoutUser()">LOG OUT</button>
+    </a>
     <br>
     <h1 class="heading padding" style="color: black;">SYNAPSE 2017</h1>
     <hr class="under_head">
@@ -57,7 +57,7 @@
                 <p class="lead min_padding">Name : {{participant.name}}</p>
             </div>
             <div class="col-md-6">
-                <p class="lead min_padding">Email Adress : {{participant.email}}</p>
+                <p class="lead min_padding">Email Address : {{participant.email}}</p>
             </div>
         </div>
         <div class="row">

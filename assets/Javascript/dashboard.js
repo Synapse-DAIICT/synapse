@@ -56,6 +56,11 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   var selectedCheckboxes = [];
 
+  $scope.logoutUser = function() {
+    $cookies.remove('email');
+    window.location.href = 'login.html';
+  }
+
   $scope.closeModal = function(modalID) {
 
     selectedCheckboxes = [];
@@ -77,11 +82,11 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   $scope.registerEvent = function(eventID, eventName) {
 
-    console.log();
-
     $(':checkbox:checked').each(function(i){
       selectedCheckboxes[i] = $(this).val();
     });
+
+    $('.btn-success').attr('disabled', 'disabled');
 
     // console.log("eventID", eventID);
     // console.log("eventName", eventName);
