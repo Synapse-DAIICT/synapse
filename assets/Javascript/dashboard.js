@@ -3,6 +3,7 @@ var app = angular.module('synapse');
 app.controller('DashboardController', function($scope, DashboardService) {
 
   $scope.getEventList = function() {
+
     $scope.loading = true;
 
     DashboardService.getParticipantDetails().then(function(response) {
@@ -75,17 +76,17 @@ app.factory('DashboardService', function($firebaseArray, $q, $http) {
 
     var defer = $q.defer();
 
-    $http.get('events.json').then(function(response) {
+    $http.get('/assets/json/events.json').then(function(response) {
 
-      var filteredEvents = response.data.filter(function(event) {
-        return participant.events.findIndex(function(participantEvent) {
-          if (participantEvent.id !== event.id) {
-            return event;
-          }
-        });
-      });
+      // var filteredEvents = response.data.filter(function(event) {
+      //   return participant.events.findIndex(function(participantEvent) {
+      //     if (participantEvent.id !== event.id) {
+      //       return event;
+      //     }
+      //   });
+      // });
 
-      defer.resolve(filteredEvents);
+      defer.resolve(response.data);
     }).catch(function(err) {
       console.log(err);
       defer.reject(err);

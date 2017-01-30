@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Synapse 2017</title>
+    <base href="/">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -106,16 +107,16 @@
     </div>
     <h2 class="heading padding">EVENT LIST</h2><br>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" ng-repeat='event in events'>
             <div class="event_card">
-                <h3>Rhapsody</h3>
+                <h3>{{event.name}}</h3>
                 <br>
                 <button type="button" class="btn btn-success" data-toggle="modal"
-                        data-target="#Rhapsody">REGISTER
+                        data-target="#{{event.id}}">REGISTER
                 </button>
             </div>
         </div>
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
             <div class="event_card">
                 <h3>DA-RUSH</h3>
                 <br>
@@ -194,12 +195,12 @@
                         data-target="#footloose">REGISTER
                 </button>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- MODAL -->
     <!-- Shaille-->
-    <div class="modal fade" id="shailee" role="dialog">
+    <div class="modal fade" id="SY17E001" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -223,7 +224,7 @@
         </div>
     </div>
     <!-- Masquerade-->
-    <div class="modal fade" id="Masquerade" role="dialog">
+    <div class="modal fade" id="SY17E010" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -256,7 +257,7 @@
         </div>
     </div>
     <!-- CS-->
-    <div class="modal fade" id="cs" role="dialog">
+    <div class="modal fade" id="SY17E012" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -299,7 +300,7 @@
         </div>
     </div>
     <!-- Dota-->
-    <div class="modal fade" id="dota" role="dialog">
+    <div class="modal fade" id="SY17E013" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -342,7 +343,7 @@
         </div>
     </div>
     <!--NFS-->
-    <div class="modal fade" id="NFS" role="dialog">
+    <div class="modal fade" id="SY17E014" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -446,8 +447,8 @@
 
         </div>
     </div>
-    <!-- Masquerade-->
-    <div class="modal fade" id="Rhapsody" role="dialog">
+    <!-- Rhapsody-->
+    <div class="modal fade" id="SY17E002" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -480,7 +481,7 @@
         </div>
     </div>
     <!--DA-RUSH-->
-    <div class="modal fade" id="darush" role="dialog">
+    <div class="modal fade" id="SY17E003" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -519,7 +520,7 @@
         </div>
     </div>
     <!-- Naach-->
-    <div class="modal fade" id="naach" role="dialog">
+    <div class="modal fade" id="SY17E004" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -549,8 +550,8 @@
 
         </div>
     </div>
-    <!-- Naach-->
-    <div class="modal fade" id="footloose" role="dialog">
+    <!-- Footloose-->
+    <div class="modal fade" id="SY17E011" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -581,7 +582,7 @@
         </div>
     </div>
     <!-- Rampage-->
-    <div class="modal fade" id="rampage" role="dialog">
+    <div class="modal fade" id="SY17E005" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -608,7 +609,7 @@
         </div>
     </div>
     <!-- Hackathon-->
-    <div class="modal fade" id="hackathon" role="dialog">
+    <div class="modal fade" id="SY17E006" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -655,7 +656,7 @@
         </div>
     </div>
     <!-- INC-->
-    <div class="modal fade" id="INC" role="dialog">
+    <div class="modal fade" id="SY17E008" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -682,7 +683,7 @@
         </div>
     </div>
     <!-- Surge-->
-    <div class="modal fade" id="surge" role="dialog">
+    <div class="modal fade" id="SY17E007" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -711,7 +712,7 @@
         </div>
     </div>
     <!-- Hip Hop Street-->
-    <div class="modal fade" id="hiphop" role="dialog">
+    <div class="modal fade" id="SY17E009" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
