@@ -108,7 +108,8 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
   return {
     getParticipantDetails: getParticipantDetails,
     getEventList: getEventList,
-    register: register
+    register: register,
+    updateUserData: updateUserData
   };
 
   function getParticipantDetails() {
@@ -146,18 +147,22 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
 
       var registeredEventIds = [];
 
-      participant.events.forEach(function(event){
-        registeredEventIds.push(event.id);
-      });
+      var filteredEvents = response.data;
 
-      var filteredEvents = response.data.filter(function(event) {
-        if(registeredEventIds.indexOf(event.id) != -1) {
-          return false;
-        } else {
-          return true;
-        }
-      });
+      if(participant.events && participant.events.length > 0) {
 
+        participant.events.forEach(function(event){
+          registeredEventIds.push(event.id);
+        });
+
+        filteredEvents = response.data.filter(function(event) {
+          if(registeredEventIds.indexOf(event.id) != -1) {
+            return false;
+          } else {
+            return true;
+          }
+        });
+      }
 
       defer.resolve(filteredEvents);
     }).catch(function(err) {
@@ -179,6 +184,23 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
       participant.events = [];
       participant.events.push(event);
     }
+
+    var data = $firebaseArray(ref);
+
+    data.$loaded().then(function(data) {
+      var index = data.$indexFor(participant.$id);
+      data[index] = participant;
+      data.$save(index);
+      defer.resolve();
+    });
+
+    return defer.promise;
+
+  }
+
+  function updateUserData(user) {
+
+    var defer = $q.defer();
 
     var data = $firebaseArray(ref);
 
