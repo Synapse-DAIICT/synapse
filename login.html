@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='synapse'>
 <head>
 
     <title>Synapse 2017</title>
@@ -96,7 +96,7 @@
     </div>
 
 </section>
-<div class="container">
+<div class="container" ng-controller='AuthController'>
     <br>
     <h1 class="heading padding" style="color: black;">LOG IN</h1>
     <hr class="under_head">
@@ -105,10 +105,13 @@
         <form>
             <div class="form-group">
                 <label class="lead min_padding" for="email">Email :</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" required ng-model='user.email'>
             </div>
             <br>
-            <a type="button" style="width: 200px;" class="btn btn-primary center-block" href="#">Login</a><br>
+            <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
+              {{error}}
+            </div>
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-disabled='loading' ng-click='login()'>Login</button><br>
             <p style="text-align: center;">If you have not Registered, <a href="register.html">Register</a></p>
         </form>
     </div>
@@ -161,6 +164,25 @@
 <script src="assets/jarallax/jarallax.js"></script>
 <script src="assets/theme/js/script.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6p0APHD1XjE7HbDhV3aWg0Eqo4RbLXjk",
+    authDomain: "synapse-2aadf.firebaseapp.com",
+    databaseURL: "https://synapse-2aadf.firebaseio.com",
+    storageBucket: "synapse-2aadf.appspot.com",
+    messagingSenderId: "87001485842"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="assets/Javascript/app.js" charset="utf-8"></script>
+<script src="assets/Javascript/email.js" charset="utf-8"></script>
+<script src="assets/Javascript/login.js" charset="utf-8"></script>
 
 <input name="animation" type="hidden">
 </body>

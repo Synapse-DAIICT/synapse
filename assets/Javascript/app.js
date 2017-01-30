@@ -1,1 +1,1 @@
-var app = angular.module('synapse', ['firebase']);
+var app = angular.module('synapse', ['firebase', 'ngCookies']);

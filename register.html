@@ -106,7 +106,7 @@
             </div>
             <div class="form-group">
                 <label class="lead min_padding" for="num">Contact Number :</label>
-                <input type="contact" class="form-control" id="num" required ng-model='participant.contact'>
+                <input type="number" class="form-control" id="num" required ng-model='participant.contact'>
             </div>
             <div class="form-group">
                 <label class="lead min_padding" for="email">Email :</label>
@@ -116,6 +116,9 @@
                 <label class="lead min_padding" for="clg_name">College Name :</label>
                 <input type="text" class="form-control" id="clg_name" required ng-model='participant.institute'>
             </div><br>
+            <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
+              {{error}}
+            </div>
             <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()'>Register</button><br>
             <p style="text-align: center;">If you have already Registered, <a href="login.html">Login</a></p>
         </form>
@@ -170,6 +173,7 @@
 <script src="assets/theme/js/script.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
 <script>
@@ -185,6 +189,7 @@
 </script>
 
 <script src="assets/Javascript/app.js" charset="utf-8"></script>
+<script src="assets/Javascript/email.js" charset="utf-8"></script>
 <script src="assets/Javascript/register.js" charset="utf-8"></script>
 
 
