@@ -10,9 +10,10 @@ app.controller('RegisterController', function($scope, RegisterService, EmailServ
       return RegisterService.register($scope.participant);
     }).then(function(response) {
       $scope.loading = false;
-      $cookies.put('email', $scope.user.email);
+      $cookies.put('email', $scope.participant.email);
       window.location.href = 'dashboard.html'
     }).catch(function(err) {
+      console.log(err);
       $scope.loading = false;
       $scope.error = 'Email already exists';
     });

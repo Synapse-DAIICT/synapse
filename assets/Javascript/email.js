@@ -16,8 +16,8 @@ app.factory('EmailService', function($q, $firebaseArray) {
     list.$ref().orderByChild('email')
       .startAt(email)
       .endAt(email)
-      .on('value', function(snapshot) {
-        !snapshot.val() ? defer.resolve(snapshot.val()) : defer.reject();
+      .once('value', function(snapshot) {
+        snapshot.val() ? defer.reject() : defer.resolve();
       });
 
       return defer.promise
