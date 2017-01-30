@@ -38,10 +38,22 @@
             background-color: #e6e6e6;
             margin-bottom: 30px;
         }
+        .loader {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        body{
+          height: 100vh;
+        }
+        .d-none{
+          display: none !important;
+        }
     </style>
 </head>
-<body>
-<div class="container dashboard" ng-controller='DashboardController' ng-init='getEventList()'>
+<body ng-controller='DashboardController' ng-init='getEventList()'>
+<img ng-hide="dashboardLoaded" src="assets/ripple.gif" class="loader" alt="">
+<div ng-show="dashboardLoaded" class="container dashboard" >
     <a>
         <button class="btn btn-default" style="float:right;" ng-click="logoutUser()">LOG OUT</button>
     </a>

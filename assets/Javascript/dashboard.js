@@ -23,6 +23,7 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
     }).then(function(response) {
       $scope.loading = false;
       $scope.events = response;
+      $scope.dashboardLoaded = true;
     }).catch(function(err) {
       $scope.loading = false;
       console.log(err);
@@ -51,6 +52,8 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
           "SY17E016": {}
       };
   }
+
+  $scope.dashboardLoaded = false;
 
   $scope.initializeFormData();
 
