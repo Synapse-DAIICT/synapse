@@ -199,7 +199,7 @@
     </div>
 
     <!-- MODAL -->
-    <!-- Shaille-->
+    <!-- Shailee -->
     <div class="modal fade" id="SY17E001" role="dialog">
         <div class="modal-dialog">
 
@@ -216,8 +216,8 @@
                         <label>Poetry Slam - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
                         <label>Literature Quiz - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E001')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -243,14 +243,14 @@
                             <input type="password" class="form-control" id="num">
                         </div>
 
-                        <label>Naivete - </label> <input type="checkbox" value="Writing_Contest"><br><br>
-                        <label>Felicity - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
-                        <label>Procenium - </label> <input type="checkbox" value="Author's_Session"><br><br>
-                        <label>Pehchan Kaun - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
-                        <label>Goofspoof - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
+                        <label>Naivete - </label> <input type="checkbox" value="Naivete"><br><br>
+                        <label>Felicity - </label> <input type="checkbox" value="Felicity"><br><br>
+                        <label>Procenium - </label> <input type="checkbox" value="Procenium"><br><br>
+                        <label>Pehchan Kaun - </label> <input type="checkbox" value="Pehchan_Kaun"><br><br>
+                        <label>Goofspoof - </label> <input type="checkbox" value="Goofspoof"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E010')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -292,8 +292,8 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E012')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -335,8 +335,8 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E013')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -374,15 +374,15 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E014')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
     <!--AOE-->
-    <div class="modal fade" id="AOE" role="dialog">
+    <div class="modal fade" id="SY17E015" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -405,15 +405,15 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E015')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
     <!--MM-->
-    <div class="modal fade" id="MM" role="dialog">
+    <div class="modal fade" id="SY17E016" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -440,8 +440,8 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E016')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -460,11 +460,11 @@
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding" for="usr">Team Name :</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" ng-model="eventsFormData.SY17E002.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding" for="num">Team Size :</label>
-                            <input type="password" class="form-control" id="num">
+                            <input type="number" class="form-control" id="num" ng-model="eventsFormData.SY17E002.teamSize">
                         </div>
 
                         <label>Indian Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
@@ -473,8 +473,8 @@
                         <label>Western group - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
                         <label>Instrumental - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E002')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -512,8 +512,8 @@
                             <input type="password" class="form-control" required>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E003')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -539,12 +539,12 @@
                             <input type="password" class="form-control" id="num">
                         </div>
 
-                        <label>Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
-                        <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
-                        <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                        <label>Solo - </label> <input type="checkbox" value="Solo"><br><br>
+                        <label>Duet - </label> <input type="checkbox" value="Duet"><br><br>
+                        <label>Group - </label> <input type="checkbox" value="Group"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E004')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -574,8 +574,8 @@
                         <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                         <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E011')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -601,8 +601,8 @@
                             <input type="password" class="form-control">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E005')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -648,8 +648,8 @@
                             <input type="password" class="form-control">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E006')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -675,8 +675,8 @@
                             <input type="password" class="form-control">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E008')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -704,8 +704,8 @@
                         <label>SNAPSHOT - </label> <input type="checkbox" value="Writing_Contest"><br><br>
                         <label>CELLULOID - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E007')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
@@ -733,8 +733,8 @@
                         <label>Beat boxing/Rapping - </label> <input type="checkbox" value="Writing_Contest"><br><br>
                         <label>Dance - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success">Register</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E009')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 

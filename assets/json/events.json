@@ -9,7 +9,7 @@
   },
   {
     "id": "SY17E003",
-    "name": "DA-RUSH"
+    "name": "DA-Rush"
   },
   {
     "id": "SY17E004",
@@ -36,7 +36,7 @@
     "name": "Hip-Hop-Street"
   },
   {
-    "id": "SY17E0010",
+    "id": "SY17E010",
     "name": "Masquerade"
   },
   {
@@ -45,14 +45,22 @@
   },
   {
     "id": "SY17E012",
-    "name": "CS"
+    "name": "CS-1.6"
   },
   {
     "id": "SY17E013",
-    "name": "Dota"
+    "name": "Dota-2"
   },
   {
     "id": "SY17E014",
     "name": "NFS"
+  },
+  {
+    "id": "SY17E015",
+    "name": "Age-Of-Empires"
+  },
+  {
+    "id": "SY17E016",
+    "name": "Mini-Militia"
   }
 ]

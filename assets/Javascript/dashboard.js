@@ -1,6 +1,6 @@
 var app = angular.module('synapse');
 
-app.controller('DashboardController', function($scope, DashboardService) {
+app.controller('DashboardController', function($scope, jQuery, DashboardService) {
 
   $scope.getEventList = function() {
 
@@ -22,19 +22,76 @@ app.controller('DashboardController', function($scope, DashboardService) {
 
   }
 
-  $scope.register = function(event) {
+  $scope.initializeFormData = function() {
+      $scope.eventsFormData = {
+          "SY17E001": {},
+          "SY17E002": {},
+          "SY17E003": {},
+          "SY17E004": {},
+          "SY17E005": {},
+          "SY17E006": {},
+          "SY17E007": {},
+          "SY17E008": {},
+          "SY17E009": {},
+          "SY17E010": {},
+          "SY17E011": {},
+          "SY17E012": {},
+          "SY17E013": {},
+          "SY17E014": {},
+          "SY17E015": {},
+          "SY17E016": {}
+      };
+  }
 
-    if (confirm('Confirm register?')) {
+  $scope.initializeFormData();
 
-      DashboardService.register(event).then(function(response) {
-        console.log(response);
-      });
+  var selectedCheckboxes = [];
 
-    }
+  $scope.closeModal = function() {
+
+    selectedCheckboxes = [];
+
+    $(':checkbox:checked').each(function(i){
+      this.checked = false;
+    });
+
+    $scope.initializeFormData();
+
+  }
+
+  $scope.registerEvent = function(eventID) {
+
+    $(':checkbox:checked').each(function(i){
+      selectedCheckboxes[i] = $(this).val();
+    });
+
+    console.log("eventID", eventID);
+    // console.log(selectedCheckboxes);
+    // console.log($scope.eventsFormData[eventID]);
+    // console.log($scope.eventsFormData);
+
+    var eventObj = {
+      "id": eventID,
+      "data": $scope.eventsFormData[eventID]
+    };
+
+    console.log("eventObj:", eventObj);
+
+    // if (confirm('Confirm register?')) {
+    //
+    //   DashboardService.register(event).then(function(response) {
+    //     console.log(response);
+    //   });
+    //
+    // }
+
+
 
   }
 
 });
+
+// Controller END
 
 app.factory('DashboardService', function($firebaseArray, $q, $http) {
 
@@ -54,27 +111,29 @@ app.factory('DashboardService', function($firebaseArray, $q, $http) {
     var list = $firebaseArray(ref);
 
     list.$ref().orderByChild('email')
-      .startAt('dhwanil_95@yahoo.com')
-      .endAt('dhwanil_95@yahoo.com')
-      .on('value', function(snapshot) {
+    .startAt('dhwanil_95@yahoo.com')
+    .endAt('dhwanil_95@yahoo.com')
+    .on('value', function(snapshot) {
 
-        var data = snapshot.val();
+      var data = snapshot.val();
 
-        for(value in data) {
-          participant = data[value];
-          participant.$id = value;
-        }
+      for(value in data) {
+        participant = data[value];
+        participant.$id = value;
+      }
 
-        defer.resolve(participant);
+      defer.resolve(participant);
 
-      });
+    });
 
-      return defer.promise
+    return defer.promise
   }
 
   function getEventList() {
 
     var defer = $q.defer();
+
+    var loadingEventsData;
 
     $http.get('/assets/json/events.json').then(function(response) {
 
