@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='synapse'>
+<head>
+    <meta charset="UTF-8">
+    <title>Synapse 2017</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/Style.css">
+    <style>
+        .dashboard {
+            padding: 15px;
+        }
+
+        .btn {
+            border-radius: 5px;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .user_details {
+            text-align: left;
+        }
+
+        .event_card {
+            height: 180px;
+            padding: 20px;
+            text-align: center;
+            background-color: #e6e6e6;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container dashboard" ng-controller='DashboardController' ng-init='getEventList()'>
+    <a href="login.html">
+        <button class="btn btn-default" style="float:right;">LOG OUT</button>
+    </a>
+    <br>
+    <h1 class="heading padding" style="color: black;">SYNAPSE 2017</h1>
+    <hr class="under_head">
+    <br>
+    <h2 class="heading padding">USER DETAILS</h2><br>
+    <h1 class="text-center" ng-if='loading'>Please wait</h1>
+    <div class="user_details" ng-if='!loading'>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead min_padding">Name : {{participant.name}}</p>
+            </div>
+            <div class="col-md-6">
+                <p class="lead min_padding">Email Adress : {{participant.email}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead min_padding">Contact Number : {{participant.contact}}</p>
+            </div>
+            <div class="col-md-6">
+                <p class="lead min_padding">College Name : {{participant.institute}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#edit">EDIT DETAILS</button>
+    <div id="edit" class="collapse">
+        <div class="center-block" style="width: 300px;text-align: left;">
+            <br>
+            <form>
+                <div class="form-group">
+                    <label class="lead min_padding" for="usr">Name :</label>
+                    <input type="text" class="form-control" id="usr" required ng-model='participant.name'>
+                </div>
+                <div class="form-group">
+                    <label class="lead min_padding" for="num">Contact Number :</label>
+                    <input type="number" class="form-control" id="num" required ng-model='participant.contact'>
+                </div>
+                <div class="form-group">
+                    <label class="lead min_padding" for="email">Email :</label>
+                    <input type="email" class="form-control" id="email" required ng-model='participant.email'>
+                </div>
+                <div class="form-group">
+                    <label class="lead min_padding" for="clg_name">College Name :</label>
+                    <input type="text" class="form-control" id="clg_name" required ng-model='participant.institute'>
+                </div>
+                <br>
+                <button type="button" style="width: 200px;" class="btn btn-primary center-block" href="#">Edit</button><br>
+            </form>
+        </div>
+    </div>
+    <h2 class="heading padding">REGISTERED EVENTS</h2><br>
+    <div class="row">
+        <div class="col-md-3" ng-repeat='event in participantEvents'>
+          <div class="event_card">
+            <h3>{{event.name}}</h3>
+            <br>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shailee">EXPLORE</button>
+          </div>
+        </div>
+    </div>
+    <h2 class="heading padding">EVENT LIST</h2><br>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Rhapsody</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#Rhapsody">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>DA-RUSH</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#darush">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Naach</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#naach">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Rampage</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#rampage">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Hackathon</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#hackathon">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Surge</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#surge">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>INC</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#INC">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Hip-Hop Street</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#hiphop">REGISTER</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Masquerade</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#Masquerade">REGISTER
+                </button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="event_card">
+                <h3>Footloose</h3>
+                <br>
+                <button type="button" class="btn btn-success" data-toggle="modal"
+                        data-target="#footloose">REGISTER
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <!-- Shaille-->
+    <div class="modal fade" id="shailee" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">SHAILEE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <label>Writing Contest - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Spelling Bee - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>Author's Session - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                        <label>Poetry Slam - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
+                        <label>Literature Quiz - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Masquerade-->
+    <div class="modal fade" id="Masquerade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">Masquerade</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding" for="usr">Team Name :</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding" for="num">Team Size :</label>
+                            <input type="password" class="form-control" id="num">
+                        </div>
+
+                        <label>Naivete - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Felicity - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>Procenium - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                        <label>Pehchan Kaun - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
+                        <label>Goofspoof - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- CS-->
+    <div class="modal fade" id="cs" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">CS 1.6</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 4 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 5 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Dota-->
+    <div class="modal fade" id="dota" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">DOTA 2</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 4 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 5 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--NFS-->
+    <div class="modal fade" id="NFS" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">NFS MW</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 4 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--AOE-->
+    <div class="modal fade" id="AOE" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">AGE OF EMPIRE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--MM-->
+    <div class="modal fade" id="MM" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">MINI MILITIA</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Masquerade-->
+    <div class="modal fade" id="Rhapsody" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">Rhapsody</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding" for="usr">Team Name :</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding" for="num">Team Size :</label>
+                            <input type="password" class="form-control" id="num">
+                        </div>
+
+                        <label>Indian Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Indian group - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>Western solo - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                        <label>Western group - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
+                        <label>Instrumental - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--DA-RUSH-->
+    <div class="modal fade" id="darush" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">DA RUSH</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Naach-->
+    <div class="modal fade" id="naach" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">NAACH</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding" for="usr">Team Name :</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding" for="num">Team Size :</label>
+                            <input type="password" class="form-control" id="num">
+                        </div>
+
+                        <label>Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Naach-->
+    <div class="modal fade" id="footloose" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">FOOTLOOSE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding" for="usr">Team Name :</label>
+                            <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding" for="num">Team Size :</label>
+                            <input type="password" class="form-control" id="num">
+                        </div>
+
+                        <label>Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Rampage-->
+    <div class="modal fade" id="rampage" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">RAMPAGE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Hackathon-->
+    <div class="modal fade" id="hackathon" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">HACKATHON</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 1 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 2 :</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 3 :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 4 :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Member 5 :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- INC-->
+    <div class="modal fade" id="INC" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">RAMPAGE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Surge-->
+    <div class="modal fade" id="surge" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">SURGE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <label>SNAPSHOT - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>CELLULOID - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Hip Hop Street-->
+    <div class="modal fade" id="hiphop" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">SURGE</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Name :</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <label>Beat boxing/Rapping - </label> <input type="checkbox" value="Writing_Contest"><br><br>
+                        <label>Dance - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                    </div>
+                    <button type="button" class="btn btn-success">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6p0APHD1XjE7HbDhV3aWg0Eqo4RbLXjk",
+    authDomain: "synapse-2aadf.firebaseapp.com",
+    databaseURL: "https://synapse-2aadf.firebaseio.com",
+    storageBucket: "synapse-2aadf.appspot.com",
+    messagingSenderId: "87001485842"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="assets/Javascript/app.js" charset="utf-8"></script>
+<script src="assets/Javascript/dashboard.js" charset="utf-8"></script>
+
+</body>
+</html>
