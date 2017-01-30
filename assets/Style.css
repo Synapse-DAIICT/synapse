@@ -196,3 +196,8 @@ iframe {
         margin-top: 20px;
     }
 }
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: block !important;
+  visibility: hidden !important;
+}

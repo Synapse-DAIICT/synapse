@@ -144,15 +144,22 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
 
     $http.get('/assets/json/events.json').then(function(response) {
 
-      // var filteredEvents = response.data.filter(function(event) {
-      //   return participant.events.findIndex(function(participantEvent) {
-      //     if (participantEvent.id !== event.id) {
-      //       return event;
-      //     }
-      //   });
-      // });
+      var registeredEventIds = [];
 
-      defer.resolve(response.data);
+      participant.events.forEach(function(event){
+        registeredEventIds.push(event.id);
+      });
+
+      var filteredEvents = response.data.filter(function(event) {
+        if(registeredEventIds.indexOf(event.id) != -1) {
+          return false;
+        } else {
+          return true;
+        }
+      });
+
+
+      defer.resolve(filteredEvents);
     }).catch(function(err) {
       console.log(err);
       defer.reject(err);
