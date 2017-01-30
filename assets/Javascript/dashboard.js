@@ -80,13 +80,15 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
       "data": $scope.eventsFormData[eventID]
     };
 
+    eventObj.data.selectedCheckboxes = selectedCheckboxes;
+
     console.log("eventObj:", eventObj);
 
     // if (confirm('Confirm register?')) {
     //
-    //   DashboardService.register(event).then(function(response) {
-    //     console.log(response);
-    //   });
+      DashboardService.register(eventObj).then(function(response) {
+        console.log('done');
+      });
     //
     // }
 
