@@ -2,6 +2,12 @@ var app = angular.module('synapse');
 
 app.controller('DashboardController', function($scope, jQuery, $cookies, DashboardService) {
 
+  $scope.checkEventsLength = function() {
+
+    return DashboardService.checkEventsLength();
+
+  }
+
   $scope.getEventList = function() {
 
     if (!$cookies.get('email')) {
@@ -62,14 +68,23 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   }
 
+  $scope.deRegisterEvent = function(eventID) {
+    DashboardService.deRegister(eventID).then(function(){
+      console.log("deRegistered:", eventID);
+      location.reload();
+    });
+  }
+
   $scope.registerEvent = function(eventID, eventName) {
+
+    console.log();
 
     $(':checkbox:checked').each(function(i){
       selectedCheckboxes[i] = $(this).val();
     });
 
-    console.log("eventID", eventID);
-    console.log("eventName", eventName);
+    // console.log("eventID", eventID);
+    // console.log("eventName", eventName);
     // console.log(selectedCheckboxes);
     // console.log($scope.eventsFormData[eventID]);
     // console.log($scope.eventsFormData);
@@ -115,8 +130,14 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
     getParticipantDetails: getParticipantDetails,
     getEventList: getEventList,
     register: register,
-    updateUserData: updateUserData
+    deRegister: deRegister,
+    updateUserData: updateUserData,
+    checkEventsLength: checkEventsLength
   };
+
+  function checkEventsLength() {
+    return (participant.events && participant.events.length > 0);
+  }
 
   function getParticipantDetails() {
 
@@ -204,6 +225,33 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
 
   }
 
+  function deRegister(eventID) {
+
+    var defer = $q.defer();
+
+    console.log("eventID", eventID);
+
+    console.log("before participant", JSON.stringify(participant));
+
+    participant.events = participant.events.filter(function(event) {
+      return (event.id !== eventID);
+    });
+
+    console.log("after participant", JSON.stringify(participant));
+
+    var data = $firebaseArray(ref);
+
+    data.$loaded().then(function(data) {
+      var index = data.$indexFor(participant.$id);
+      data[index] = participant;
+      data.$save(index);
+      defer.resolve();
+    });
+
+    return defer.promise;
+
+  }
+
   function updateUserData(user) {
 
     var defer = $q.defer();
@@ -212,7 +260,7 @@ app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
 
     data.$loaded().then(function(data) {
       var index = data.$indexFor(participant.$id);
-      data[index] = participant;
+      data[index] = user;
       data.$save(index);
       defer.resolve();
     });
