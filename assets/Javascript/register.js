@@ -1,17 +1,20 @@
 var app = angular.module('synapse');
 
-app.controller('RegisterController', function($scope, RegisterService) {
+app.controller('RegisterController', function($scope, RegisterService, EmailService, $cookies) {
 
   $scope.register = function() {
 
     $scope.loading = true;
 
-    RegisterService.register($scope.participant).then(function(response) {
+    EmailService.checkEmailExists($scope.participant.email).then(function() {
+      return RegisterService.register($scope.participant);
+    }).then(function(response) {
       $scope.loading = false;
+      $cookies.put('email', $scope.user.email);
       window.location.href = 'dashboard.html'
     }).catch(function(err) {
       $scope.loading = false;
-      console.log(err);
+      $scope.error = 'Email already exists';
     });
 
   }

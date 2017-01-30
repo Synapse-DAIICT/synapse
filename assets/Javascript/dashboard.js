@@ -1,13 +1,16 @@
 var app = angular.module('synapse');
 
-app.controller('DashboardController', function($scope, jQuery, DashboardService) {
+app.controller('DashboardController', function($scope, jQuery, $cookies, DashboardService) {
 
   $scope.getEventList = function() {
+
+    if (!$cookies.get('email')) {
+      window.location.href = 'login.html'
+    }
 
     $scope.loading = true;
 
     DashboardService.getParticipantDetails().then(function(response) {
-      console.log(response);
       $scope.participant = response;
       $scope.participantEvents = response.events;
       return DashboardService.getEventList();
@@ -93,7 +96,7 @@ app.controller('DashboardController', function($scope, jQuery, DashboardService)
 
 // Controller END
 
-app.factory('DashboardService', function($firebaseArray, $q, $http) {
+app.factory('DashboardService', function($firebaseArray, $q, $http, $cookies) {
 
   var ref = firebase.database().ref().child('participants');
   var participant = {};
@@ -111,9 +114,9 @@ app.factory('DashboardService', function($firebaseArray, $q, $http) {
     var list = $firebaseArray(ref);
 
     list.$ref().orderByChild('email')
-    .startAt('dhwanil_95@yahoo.com')
-    .endAt('dhwanil_95@yahoo.com')
-    .on('value', function(snapshot) {
+      .startAt($cookies.get('email'))
+      .endAt($cookies.get('email'))
+      .on('value', function(snapshot) {
 
       var data = snapshot.val();
 
