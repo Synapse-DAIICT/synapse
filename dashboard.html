@@ -206,7 +206,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">SHAILEE</h2>
+                    <h2 class="heading padding">Shailee</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
@@ -216,7 +216,7 @@
                         <label>Poetry Slam - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
                         <label>Literature Quiz - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E001')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E001', 'Shailee')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -236,11 +236,11 @@
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding" for="usr">Team Name :</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr"  ng-model="eventsFormData.SY17E010.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding" for="num">Team Size :</label>
-                            <input type="password" class="form-control" id="num">
+                            <input type="password" class="form-control" id="num"  ng-model="eventsFormData.SY17E010.teamSize">
                         </div>
 
                         <label>Naivete - </label> <input type="checkbox" value="Naivete"><br><br>
@@ -249,7 +249,7 @@
                         <label>Pehchan Kaun - </label> <input type="checkbox" value="Pehchan_Kaun"><br><br>
                         <label>Goofspoof - </label> <input type="checkbox" value="Goofspoof"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E010')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E010', 'Masquerade')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -263,43 +263,43 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">CS 1.6</h2>
+                    <h2 class="heading padding">Counter Strike 1.6</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E012.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E012.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E012.member2">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E012.member3">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 4 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E012.member4">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 5 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E012.member5">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E012')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E012', 'CS-1.6')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <!-- Dota-->
+    <!-- Dota-2-->
     <div class="modal fade" id="SY17E013" role="dialog">
         <div class="modal-dialog">
 
@@ -312,135 +312,135 @@
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E013.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E013.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E013.member2">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E013.member3">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 4 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E013.member4">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 5 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E013.member5">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E013')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E013', 'Dota-2')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <!--NFS-->
+    <!--NFS-MW-->
     <div class="modal fade" id="SY17E014" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">NFS MW</h2>
+                    <h2 class="heading padding">Need For Speed - Most Wanted</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E014.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E014.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E014.member2">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E014.member3">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 4 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E014.member4">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E014')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E014', 'NFS-MW')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <!--AOE-->
+    <!--Age-Of-Empires-->
     <div class="modal fade" id="SY17E015" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">AGE OF EMPIRE</h2>
+                    <h2 class="heading padding">Age of Empires</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E015.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E015.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E015.member2">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E015')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E015', 'Age-Of-Empires')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <!--MM-->
+    <!--Mini-Militia-->
     <div class="modal fade" id="SY17E016" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">MINI MILITIA</h2>
+                    <h2 class="heading padding">Mini Militia</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E016.teamSize">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E016.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E016.member2">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E016.member3">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E016')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E016', 'Mini-Militia')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -473,46 +473,46 @@
                         <label>Western group - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
                         <label>Instrumental - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E002')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E002', 'Rhapsody')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
 
         </div>
     </div>
-    <!--DA-RUSH-->
+    <!--DA-Rush-->
     <div class="modal fade" id="SY17E003" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">DA RUSH</h2>
+                    <h2 class="heading padding">DA Rush</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E003.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E003.teamSize">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E003.member1">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E003.member2">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" required ng-model="eventsFormData.SY17E003.member3">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E003')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E003', 'DA-Rush')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -526,24 +526,24 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">NAACH</h2>
+                    <h2 class="heading padding">Naach</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding" for="usr">Team Name :</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" ng-model="eventsFormData.SY17E004.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding" for="num">Team Size :</label>
-                            <input type="password" class="form-control" id="num">
+                            <input type="password" class="form-control" id="num" ng-model="eventsFormData.SY17E004.teamSize">
                         </div>
 
                         <label>Solo - </label> <input type="checkbox" value="Solo"><br><br>
                         <label>Duet - </label> <input type="checkbox" value="Duet"><br><br>
                         <label>Group - </label> <input type="checkbox" value="Group"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E004')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E004', 'Naach')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -557,24 +557,24 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">FOOTLOOSE</h2>
+                    <h2 class="heading padding">Footloose</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding" for="usr">Team Name :</label>
-                            <input type="text" class="form-control" id="usr">
+                            <input type="text" class="form-control" id="usr" ng-model="eventsFormData.SY17E011.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding" for="num">Team Size :</label>
-                            <input type="password" class="form-control" id="num">
+                            <input type="password" class="form-control" id="num" ng-model="eventsFormData.SY17E011.teamSize">
                         </div>
 
                         <label>Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
                         <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                         <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E011')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E011', 'Footloose')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -588,20 +588,20 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">RAMPAGE</h2>
+                    <h2 class="heading padding">Rampage</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E005.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E005.teamSize">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E005')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E005', 'Rampage')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -615,40 +615,40 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">HACKATHON</h2>
+                    <h2 class="heading padding">Hackathon</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E006.teamName" required>
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.teamSize" required>
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.member1" required>
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 2 :</label>
-                            <input type="password" class="form-control" required>
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.member2" required>
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 3 :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.member3">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 4 :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.member4">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 5 :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E006.member5">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E006')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E006', 'Hackathon')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -662,20 +662,20 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">RAMPAGE</h2>
+                    <h2 class="heading padding">INC</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E008.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E008.teamSize">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E008')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E008', 'INC')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -689,22 +689,22 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">SURGE</h2>
+                    <h2 class="heading padding">Surge</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E007.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E007.teamSize">
                         </div>
                         <label>SNAPSHOT - </label> <input type="checkbox" value="Writing_Contest"><br><br>
                         <label>CELLULOID - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E007')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E007', 'Surge')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>
@@ -718,22 +718,22 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-body">
-                    <h2 class="heading padding">SURGE</h2>
+                    <h2 class="heading padding">Hip Hop Street</h2>
                     <hr class="under_head">
                     <br>
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E009.teamName">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Team Size :</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" ng-model="eventsFormData.SY17E009.teamSize">
                         </div>
                         <label>Beat boxing/Rapping - </label> <input type="checkbox" value="Writing_Contest"><br><br>
                         <label>Dance - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
                     </div>
-                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E009')">Register</button>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E009', 'Hip-Hop-Street')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal()">Close</button>
                 </div>
             </div>

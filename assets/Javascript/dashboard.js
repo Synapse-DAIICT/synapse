@@ -62,19 +62,21 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   }
 
-  $scope.registerEvent = function(eventID) {
+  $scope.registerEvent = function(eventID, eventName) {
 
     $(':checkbox:checked').each(function(i){
       selectedCheckboxes[i] = $(this).val();
     });
 
     console.log("eventID", eventID);
+    console.log("eventName", eventName);
     // console.log(selectedCheckboxes);
     // console.log($scope.eventsFormData[eventID]);
     // console.log($scope.eventsFormData);
 
     var eventObj = {
       "id": eventID,
+      "name": eventName,
       "data": $scope.eventsFormData[eventID]
     };
 
