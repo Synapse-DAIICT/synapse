@@ -10,9 +10,11 @@
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <meta name="description" content="">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
     <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
     <link rel="stylesheet" href="assets/tether/tether.min.css">
@@ -55,7 +57,7 @@
                         <li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link link" href="event.html">EVENTS</a></li>
                         <li class="nav-item"><a class="nav-link link" href="contact_us.html">CONTACT US</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li>
+                        <!--<li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li>-->
                         <li class="nav-item"><a class="nav-link link" href="register.html">REGISTER</a></li>
                     </ul>
                     <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse"
@@ -73,7 +75,7 @@
 
 <section class="engine"><a rel="external" href="https://mobirise.com">top offline site building software</a></section>
 <section class="mbr-section mbr-parallax-background mbr-after-navbar" id="msg-box8-7"
-         style="background-image: url(assets/images/Gallery/17.jpg); padding-top: 160px; padding-bottom: 120px;">
+         style="background-image: url(assets/images/Gallery/14.jpg); padding-top: 160px; padding-bottom: 120px;">
 
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);">
     </div>
@@ -115,11 +117,15 @@
             <div class="form-group">
                 <label class="lead min_padding" for="clg_name">College Name :</label>
                 <input type="text" class="form-control" id="clg_name" required ng-model='participant.institute'>
-            </div><br>
-            <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
-              {{error}}
             </div>
-            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()'>Register</button><br>
+            <br>
+            <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
+                {{error}}
+            </div>
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()'>
+                Register
+            </button>
+            <br>
             <p style="text-align: center;">If you have already Registered, <a href="login.html">Login</a></p>
         </form>
     </div>
@@ -129,9 +135,10 @@
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <a class="footer-link" href="Campus_Ambassador.html">CAMPUS AMBASSADOR</a>
-                <a class="footer-link" href="#">TRAILER</a>
                 <a class="footer-link"
-                   href="https://drive.google.com/file/d/0BxO7yBkG1U5RV21TbGxCQi03UWs/view">BROCHURE</a>
+                   href="https://drive.google.com/file/d/0B0dt8eWTvob6UlNuS3FwT2VsR28/view">TRAILER</a>
+                <a class="footer-link"
+                   href="https://drive.google.com/open?id=0B0dt8eWTvob6SmY1am9NeDJCSzQ">BROCHURE</a>
                 <a class="footer-link" href="youth_run.html">YOUTH RUN</a>
                 <a class="footer-link" href="gallery.html">GALLERY</a>
             </div>
@@ -177,15 +184,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
 <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC6p0APHD1XjE7HbDhV3aWg0Eqo4RbLXjk",
-    authDomain: "synapse-2aadf.firebaseapp.com",
-    databaseURL: "https://synapse-2aadf.firebaseio.com",
-    storageBucket: "synapse-2aadf.appspot.com",
-    messagingSenderId: "87001485842"
-  };
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC6p0APHD1XjE7HbDhV3aWg0Eqo4RbLXjk",
+        authDomain: "synapse-2aadf.firebaseapp.com",
+        databaseURL: "https://synapse-2aadf.firebaseio.com",
+        storageBucket: "synapse-2aadf.appspot.com",
+        messagingSenderId: "87001485842"
+    };
+    firebase.initializeApp(config);
 </script>
 
 <script src="assets/Javascript/app.js" charset="utf-8"></script>

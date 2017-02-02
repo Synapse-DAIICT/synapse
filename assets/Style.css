@@ -185,6 +185,7 @@ iframe {
 }
 
 
+
 /* New Things */
 
 @media screen and (max-width: 480px) {
@@ -195,9 +196,4 @@ iframe {
     .youth_spon {
         margin-top: 20px;
     }
-}
-
-[ng\:cloak], [ng-cloak], .ng-cloak {
-  display: block !important;
-  visibility: hidden !important;
 }
