@@ -31,419 +31,1620 @@
     <link rel="stylesheet" type="text/css" href="assets/amplitudeJS/css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="assets/Style/Style.css">
 </head>
-<body style="text-align: left;">
-<section id="menu-0">
+<body>
+<div style="text-align: left;" class="extra">
+    <section id="menu-0">
 
-    <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
-        <div class="container">
+        <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
+            <div class="container">
 
-            <div class="mbr-table">
-                <div class="mbr-table-cell">
+                <div class="mbr-table">
+                    <div class="mbr-table-cell">
 
-                    <div class="navbar-brand">
-                        <a href="index.html" class="navbar-logo"><img src="assets/images/logo.png"
-                                                                      alt="Synapse"></a>
+                        <div class="navbar-brand">
+                            <a href="index.html" class="navbar-logo"><img src="assets/images/logo.png"
+                                                                          alt="Synapse"></a>
+                        </div>
+
                     </div>
+                    <div class="mbr-table-cell">
 
+                        <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse"
+                                data-target="#exCollapsingNavbar">
+                            <div class="hamburger-icon"></div>
+                        </button>
+
+                        <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm"
+                            id="exCollapsingNavbar">
+                            <li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="event.html">EVENTS</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="contact_us.html">CONTACT US</a></li>
+                            <!--<li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li> -->
+                            <li class="nav-item"><a class="nav-link link" href="register.html">REGISTER</a></li>
+                        </ul>
+                        <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse"
+                                data-target="#exCollapsingNavbar">
+                            <div class="close-icon"></div>
+                        </button>
+
+                    </div>
                 </div>
-                <div class="mbr-table-cell">
 
-                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse"
-                            data-target="#exCollapsingNavbar">
-                        <div class="hamburger-icon"></div>
-                    </button>
-
-                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm"
-                        id="exCollapsingNavbar">
-                        <li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="event.html">EVENTS</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="contact_us.html">CONTACT US</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="register.html">REGISTER</a></li>
-                    </ul>
-                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse"
-                            data-target="#exCollapsingNavbar">
-                        <div class="close-icon"></div>
-                    </button>
-
-                </div>
             </div>
+        </nav>
 
-        </div>
-    </nav>
-
-</section>
-<div class="home-cover fluid-container" style="height: 550px;width: 100%; ">
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="col-lg-6 col-md-12 col-sm-12 home-content">
-                <div class="row">
-                    <div class="col-lg-10 col-md-12 col-sm-12 cover-heading">
-                        <img src="assets/images/font.svg" width="100%">
-                    </div>
-                </div>
-                <div class="row">
-                    <!--
-                    <div class="col-lg-12 player">
-                        <div id="small-player">
-                            <div id="small-player-left">
-
-                            </div>
-                            <img id="small-player-album-art" amplitude-song-info="cover"/>
-                            <div id="small-player-middle">
-                                <div id="small-player-middle-top">
-                                    <div id="small-player-middle-controls">
-                                        <div class="amplitude-play-pause amplitude-paused"
-                                             amplitude-main-play-pause="true"></div>
-                                    </div>
-                                    <div id="small-player-middle-meta">
-                                        <div id="now-playing-title" amplitude-song-info="name"></div>
-                                        <div class="album-information"><span amplitude-song-info="artist"></span> -
-                                            <span
-                                                    amplitude-song-info="album"></span></div>
-                                    </div>
-                                </div>
-
-                                <div id="small-player-middle-bottom">
-                                    <div class="amplitude-song-time-visualization"
-                                         amplitude-single-song-time-visualization="true"
-                                         id="song-time-visualization"></div>
-                                </div>
-                            </div>
-                            <div id="small-player-right">
-				<span id="current-time">
-					<span class="amplitude-current-minutes" amplitude-single-current-minutes="true">0</span>:<span
-                        class="amplitude-current-seconds" amplitude-single-current-seconds="true">00</span>
-				</span>
-                            </div>
+    </section>
+    <div class="home-cover fluid-container" style="height: 550px;width: 100%; ">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-6 col-md-12 col-sm-12 home-content">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-12 col-sm-12 cover-heading">
+                            <img src="assets/images/new_cover/font.png" width="100%"/>
                         </div>
                     </div>
-                    -->
-                </div>
-                <div class="row cover-info">
-                    <h2>CYNASOUR</h2>
-                    <h3>PRESENTS <strong>GENERATIONWHY</strong></h3>
-                    <p>Dropped 5 months ago</p>
-                    <button type="button" class="btn btn-primary btn-lg">VIEW DROP</button>
-                </div>
-            </div>
-            <!--
-            <div class="visible-lg col-lg-6">
-                <div class="row home-content">
-                    <div class="col-lg-2">
-                        <img class="visible-lg img-circle home-icon" id="img3" src="assets/images/bike.jpg" height="120"
-                             width="120"
-                             style="position:absolute; top:150px">
-                    </div>
-                    <div class="col-lg-2">
-                        <img class="visible-lg img-circle home-icon" id="img2" src="assets/images/bike.jpg" height="100"
-                             width="100"
-                             style="position:absolute; top:-10px">
-                    </div>
-                    <div class="col-lg-offset-3 col-lg-4">
-                        <img class="visible-lg img-circle home-icon" id="img1" src="assets/images/bike.jpg" height="150"
-                             width="150"
-                             style="position:absolute; top:80px">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-offset-2 col-lg-4">
-                        <img class="visible-lg img-circle home-icon" id="img4" src="assets/images/bike.jpg" height="150"
-                             width="150"
-                             style="position:absolute; top:360px;z-index: 0;">
-                    </div>
-                    <div class="col-lg-4">
-                        <img class="visible-lg img-circle home-icon" id="img5" src="assets/images/bike.jpg" height="130"
-                             width="130"
-                             style="position:absolute; top:300px">
-                    </div>
-                </div>
-            </div>
-            -->
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-8 info-1" id="t1">
-            <div class="head-info">
-                <div class="info-heading">
-                    <h2>Inagural Night</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-9">
-                        <p class="info-content">Dropped 5 months ago</p>
-                        <h2 class="info-subheading">Behind ZHU's GENERATIONWHY: Part </h2>
-                        <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-                    </div>
-                </div>
-                <button type="button" class="bott center-block">VIEW DROP</button>
-            </div>
-            <div class="col-lg-3 info-2">
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-12 info-2" id="t2">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <a href="event.html" class="event">
-                <button type="button" class="bott center-block">REGISTER</button>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 info-2" id="t3">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t4">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t5">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4 info-2" id="t7">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-        <div class="col-lg-8 info-1" id="t6">
-            <div class="head-info">
-                <div class="info-heading">
-                    <h2>Inagural Night</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-9">
-                        <p class="info-content">Dropped 5 months ago</p>
-                        <h2 class="info-subheading">Behind ZHU's GENERATIONWHY: Part </h2>
-                        <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-                    </div>
-                </div>
-                <button type="button" class="bott center-block">VIEW DROP</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4 info-2" id="t1">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-        <div class="col-lg-4 info-2" id="t2">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-        <div class="col-lg-4 info-3" id="t3">
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-8 info-1" id="t1">
-            <div class="head-info">
-                <div class="info-heading">
-                    <h2>Inagural Night</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-9">
-                        <p class="info-content">Dropped 5 months ago</p>
-                        <h2 class="info-subheading">Behind ZHU's GENERATIONWHY: Part </h2>
-                        <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-                    </div>
-                </div>
-                <button type="button" class="bott center-block">VIEW DROP</button>
-            </div>
-            <div class="col-lg-3 info-2">
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-12 info-2" id="t2">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <a href="event.html" class="event">
-                <button type="button" class="bott center-block">REGISTER</button>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 info-2" id="t3">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t4">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t5">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4 info-2" id="t3">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t4">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott center-block">VIEW DROP</button>
-        </div>
-        <div class="col-md-4 info-2" id="t5">
-            <div class="head-info">
-                <div class="info-heading2">
-                    <h2>Inagural Night</h2>
-                </div>
-                <p class="info-content">Dropped 5 months ago</p>
-                <h2 class="info-subheading">Behind ZHU's HEY</h2>
-                <p class="info-content2">Lyric sheets handwritten by Hunter for songs from the 21 EP.</p>
-            </div>
-            <button type="button" class="bott btn-primary btn-md center-block">VIEW DROP</button>
-        </div>
-    </div>
-</div>
-<div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.499397266079!2d72.62623081500357!3d23.188464115926347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2a3cc01147eb%3A0x2cc22ec547e4caa1!2sDA-IICT!5e0!3m2!1sen!2sin!4v1475283783581"
-            width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-</div>
-<div class="footer1" style="text-align: left;margin-bottom: 0px;">
-    <div class="container-fluid" style="margin-left: -25px;">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <a class="footer-link" href="Campus_Ambassador.html">CAMPUS AMBASSADOR</a>
-                <a class="footer-link" href="#">TRAILER</a>
-                <a class="footer-link"
-                   href="https://drive.google.com/file/d/0BxO7yBkG1U5RV21TbGxCQi03UWs/view">BROCHURE</a>
-                <a class="footer-link" href="youth_run.html">YOUTH RUN</a>
-                <a class="footer-link" href="gallery.html">GALLERY</a>
-            </div>
-            <div class="col-lg-2 col-lg-offset-4 col-md-12">
-                <a href="https://www.youtube.com/user/SynapseDAIICT" target="_blank"><i
-                        class="fa fa-youtube-play fa-lg footer-icon"
-                        aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/synapsedaiict/?fref=ts" target="_blank"><i
-                        href="https://www.facebook.com/synapsedaiict/?fref=ts" class="fa fa-facebook fa-lg footer-icon"
-                        aria-hidden="true"></i></a>
-                <a href="mailto:synapse.thefest@gmail.com" target="_blank"><i
-                        class="fa fa-envelope-o fa-lg footer-icon" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/synapsedaiict/" target="_blank"><i
-                        class="fa fa-instagram fa-lg footer-icon" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-12 visible-lg">
-                <div class="row" style="padding-top: 20px;padding-bottom: 10px;">
-                    <div class="col-lg-2">
-                        <img src="assets/images/logo.png" width="54" height="50" style="margin-left: 5px;">
-                    </div>
-                    <div class="col-lg-10" style="margin-left: -10px;padding-top: 5px;">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-offset-5 col-lg-3 col-md-12 col-md-offset-0 visible-lg">
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="row">
+                        <!--
+                        <div class="col-lg-12 player">
+                            <div id="small-player">
+                                <div id="small-player-left">
 
+                                </div>
+                                <img id="small-player-album-art" amplitude-song-info="cover"/>
+                                <div id="small-player-middle">
+                                    <div id="small-player-middle-top">
+                                        <div id="small-player-middle-controls">
+                                            <div class="amplitude-play-pause amplitude-paused"
+                                                 amplitude-main-play-pause="true"></div>
+                                        </div>
+                                        <div id="small-player-middle-meta">
+                                            <div id="now-playing-title" amplitude-song-info="name"></div>
+                                            <div class="album-information"><span amplitude-song-info="artist"></span> -
+                                                <span
+                                                        amplitude-song-info="album"></span></div>
+                                        </div>
+                                    </div>
+
+                                    <div id="small-player-middle-bottom">
+                                        <div class="amplitude-song-time-visualization"
+                                             amplitude-single-song-time-visualization="true"
+                                             id="song-time-visualization"></div>
+                                    </div>
+                                </div>
+                                <div id="small-player-right">
+                    <span id="current-time">
+                        <span class="amplitude-current-minutes" amplitude-single-current-minutes="true">0</span>:<span
+                            class="amplitude-current-seconds" amplitude-single-current-seconds="true">00</span>
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                    <div class="row cover-info">
+
+                    </div>
+                </div>
+                <!--
+                <div class="visible-lg col-lg-6">
+                    <div class="row home-content">
+                        <div class="col-lg-2">
+                            <img class="visible-lg img-circle home-icon" id="img3" src="assets/images/bike.jpg" height="120"
+                                 width="120"
+                                 style="position:absolute; top:150px">
+                        </div>
+                        <div class="col-lg-2">
+                            <img class="visible-lg img-circle home-icon" id="img2" src="assets/images/bike.jpg" height="100"
+                                 width="100"
+                                 style="position:absolute; top:-10px">
+                        </div>
+                        <div class="col-lg-offset-3 col-lg-4">
+                            <img class="visible-lg img-circle home-icon" id="img1" src="assets/images/bike.jpg" height="150"
+                                 width="150"
+                                 style="position:absolute; top:80px">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-lg-4">
+                            <img class="visible-lg img-circle home-icon" id="img4" src="assets/images/bike.jpg" height="150"
+                                 width="150"
+                                 style="position:absolute; top:360px;z-index: 0;">
+                        </div>
+                        <div class="col-lg-4">
+                            <img class="visible-lg img-circle home-icon" id="img5" src="assets/images/bike.jpg" height="130"
+                                 width="130"
+                                 style="position:absolute; top:300px">
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 info-1" id="t1">
+                <div class="head-info">
+                    <div class="info-heading">
+                        <h2>PRONITES</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <p class="info-content"></p>
+                            <h2 class="info-subheading">CYNOSURE</h2>
+                            <p class="info-content2">Watch some of the best performers of the country set the
+                                stage on fire with their mesmerising music.</p>
+                        </div>
+                    </div>
+                    <a class="home-button">
+                        <button type="button" class="bott btn-primary btn-md center-block" data-toggle="modal"
+                                data-target="#inaugural">GET PASS
+                        </button>
+                    </a>
+                </div>
+                <div class="col-lg-3 info-2">
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 info-2" id="t2">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>PRONITES</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">INAGURAL</h2>
+                    <p class="info-content2">Double up laughing
+                        along with Biswa Kalyan Rath, The Viral Fever, East India Comedy and Revadio.</p>
+                </div>
+                <a class="home-button">
+                    <button type="button" class="bott btn-primary btn-md center-block" data-toggle="modal"
+                            data-target="#inaugural">GET PASS
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 info-2" id="t3">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>PRONITES</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">EDM NIGHT</h2>
+                    <p class="info-content2">Celebrate the non-stop mixes of Sunburn and VH1 Supersonic.The best DJs in
+                        the
+                        country are in the house to transcend
+                        the crowd</p>
+                </div>
+                <a class="home-button">
+                    <button type="button" class="bott btn-primary btn-md center-block" data-toggle="modal"
+                            data-target="#inaugural">GET PASS
+                    </button>
+                </a>
+            </div>
+            <div class="col-md-4 info-2" id="t4">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>PRONITES</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">RAGNA ROCK</h2>
+                    <p class="info-content2">Unbelievable guitar solos,thundering bass takes the
+                        night by storm as the crowd transforms into a sea of head bangers.</p>
+                </div>
+                <a class="home-button">
+                    <button type="button" class="bott btn-primary btn-md center-block" data-toggle="modal"
+                            data-target="#inaugural">GET PASS
+                    </button>
+                </a>
+            </div>
+            <div class="col-md-4 info-2" id="t5">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>PRONITES</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">RAGNA ROCK</h2>
+                    <p class="info-content2">Witness the best of the best; Inner Sanctum, Providence, Demonic
+                        Resurrection,
+                        Bhayanak Maut, Undying Inc. and more.</p>
+                </div>
+                <a class="home-button">
+                    <button type="button" class="bott btn-primary btn-md center-block" data-toggle="modal"
+                            data-target="#inaugural">GET PASS
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="inaugural" role="dialog" style="text-align: center;">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">PRONITES</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding"></h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Passes will be available soon.</p>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 info-2" id="t7">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>OAT EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">RAMPAGE</h2>
+                    <p class="info-content2">Lights, Camera, Fashion! Watch budding designers express their creativity,
+                        independence and boldness.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal" data-target="#rampage">VIEW</button>
+            </div>
+            <div class="col-lg-8 info-1" id="t6">
+                <div class="head-info">
+                    <div class="info-heading">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <p class="info-content"></p>
+                            <h2 class="info-subheading"></h2>
+                            <p class="info-content2"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 info-2" id="t8">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>OAT EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">FOOTLOOSE</h2>
+                    <p class="info-content2">From salsa to contemporary to fusion, fasten your seatbelts, rock the stage
+                        and
+                        shake the world with your moves.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal"
+                        data-target="#footloose">VIEW
+                </button>
+            </div>
+            <div class="col-lg-4 info-2" id="t9">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>OAT EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">NAACH</h2>
+                    <p class="info-content2">Hold your breathe as dancers illuminate the stage by exploring dance forms
+                        that
+                        showcase the richness of our pristine heritage.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal" data-target="#naach">VIEW</button>
+            </div>
+            <div class="col-lg-4 info-3" id="t11">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>OAT EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">RHAPSODY</h2>
+                    <p class="info-content2">Lose yourself behind in the magical atmosphere.Show off your skills with
+                        your
+                        melodious voice and favourite
+                        tunes.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal" data-target="#rhapsody">VIEW
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 info-1" id="t12">
+                <div class="head-info">
+                    <div class="info-heading">
+                        <h2></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <p class="info-content"></p>
+                            <h2 class="info-subheading"></h2>
+                            <p class="info-content2"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 info-2">
+                </div>
+            </div>
+            <div class="col-lg-4 info-3" id="t10">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>OAT EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">HIP-HOP STREET</h2>
+                    <p class="info-content2">Let loose and go all street-style with the insistent raps and groovy hip
+                        hop
+                        beats.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal"
+                        data-target="#hip_hop_street">VIEW
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 info-2" id="t13">
+                <div class="head-info">
+                    <div class="info-heading2">
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading"></h2>
+                    <p class="info-content2"></p>
+                </div>
+                <a class="home-button" href="gallery.html">
+                    <a class="home-button">
+                        <button type="button" class="bott center-block" style="margin-top: 250px;">GALLERY</button>
+                    </a>
+                </a>
+            </div>
+            <div class="col-md-4 info-2" id="t14">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>CEP EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">SHAILEE</h2>
+                    <p class="info-content2">Prove that the pen is mightier than the sword and join this literary
+                        feast.Get
+                        a chance to meet authors like Ashwin Sanghi and participate in
+                        writing competitions.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal" data-target="#shailee">VIEW</button>
+            </div>
+            <div class="col-md-4 info-2" id="t15">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>CEP EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">SENATE</h2>
+                    <p class="info-content2">This debating event will engage you in a battle of wit and intellect,
+                        compelling you to think out of the box and present your arguments in a logical and structured
+                        manner.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal" data-target="#senate">VIEW</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 info-2" id="t16">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>TECHNICAL EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">BATTLE-DROME</h2>
+                    <p class="info-content2">Show off your gaming skills to beat the opponent in this battle of
+                        Games.</p>
+                </div>
+
+                <button type="button" class="bott center-block" data-toggle="modal"
+                        data-target="#battledrome">VIEW
+                </button>
+            </div>
+            <div class="col-md-4 info-2" id="t17">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>TECHNICAL EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading" href="register.html">CODE MUTANTS</h2>
+                    <p class="info-content2">Show off your programming skills to beat the clock in this competitive
+                        coding
+                        contest.</p>
+                </div>
+                <button type="button" class="bott center-block" data-toggle="modal"
+                        data-target="#code_mutants">VIEW
+                </button>
+            </div>
+            <div class="col-md-4 info-2" id="t18">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>CAMPUS AMBASSADOR</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading"></h2>
+                    <p class="info-content2"></p>
+                </div>
+                <a class="home-button" href="Campus_Ambassador.html">
+                    <button type="button" class="bott center-block" style="margin-top: 180px;">APPLY</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 info-2" id="t19">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>SOCIAL EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">YOUTH RUN</h2>
+                    <p class="info-content2">The Youth Run is a 7 km marathon in the city of Gandhinagar, organised in
+                        an
+                        attempt to promote ideas that drive the youth of
+                        today. </p>
+                </div>
+                <a class="home-button" href="youth_run.html">
+                    <button type="button" class="bott center-block">EVENT</button>
+                </a>
+            </div>
+            <div class="col-md-4 info-2" id="t20">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>ACCOMMODATION</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading"></h2>
+                    <p class="info-content2"></p>
+                </div>
+                <a class="home-button" href="register.html">
+                    <button type="button" class="bott center-block" style="margin-top: 200px;">REGISTER</button>
+                </a>
+            </div>
+            <div class="col-md-4 info-2" id="t21">
+                <div class="head-info">
+                    <div class="info-heading2">
+                        <h2>CEP EVENTS</h2>
+                    </div>
+                    <p class="info-content"></p>
+                    <h2 class="info-subheading">HEADRUSH</h2>
+                    <p class="info-content2">Work up those grey cells and test your logic and knowledge with quizzes
+                        that
+                        satisfy your interests with participants from IIM’s and IIT’s</p>
+                </div>
+                <a class="home-button" href="register.html">
+                    <button type="button" class="bott center-block">REGISTER</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.499397266079!2d72.62623081500357!3d23.188464115926347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2a3cc01147eb%3A0x2cc22ec547e4caa1!2sDA-IICT!5e0!3m2!1sen!2sin!4v1475283783581"
+                width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="footer1" style="text-align: left;margin-bottom: 0px;">
+        <div class="container-fluid" style="margin-left: -25px;">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <a class="footer-link" href="Campus_Ambassador.html">CAMPUS AMBASSADOR</a>
+                    <a class="footer-link"
+                       href="https://drive.google.com/file/d/0B0dt8eWTvob6UlNuS3FwT2VsR28/view">TRAILER</a>
+                    <a class="footer-link"
+                       href="https://drive.google.com/open?id=0B0dt8eWTvob6SmY1am9NeDJCSzQ">BROCHURE</a>
+                    <a class="footer-link" href="youth_run.html">YOUTH RUN</a>
+                    <a class="footer-link" href="gallery.html">GALLERY</a>
+                </div>
+                <div class="col-lg-2 col-lg-offset-4 col-md-12">
+                    <a href="https://www.youtube.com/user/SynapseDAIICT" target="_blank"><i
+                            class="fa fa-youtube-play fa-lg footer-icon"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/synapsedaiict/?fref=ts" target="_blank"><i
+                            href="https://www.facebook.com/synapsedaiict/?fref=ts"
+                            class="fa fa-facebook fa-lg footer-icon"
+                            aria-hidden="true"></i></a>
+                    <a href="mailto:synapse.thefest@gmail.com" target="_blank"><i
+                            class="fa fa-envelope-o fa-lg footer-icon" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/synapsedaiict/" target="_blank"><i
+                            class="fa fa-instagram fa-lg footer-icon" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 visible-lg">
+                    <div class="row" style="padding-top: 20px;padding-bottom: 10px;">
+                        <div class="col-lg-2">
+                            <img src="assets/images/logo.png" width="54" height="50" style="margin-left: 5px;">
+                        </div>
+                        <div class="col-lg-10" style="margin-left: -10px;padding-top: 5px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-offset-5 col-lg-3 col-md-12 col-md-offset-0 visible-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="font-family: 'Roboto', sans-serif;
+    color: #1f1f1f;letter-spacing: 0.7px;">
+    <!-- Senate-->
+    <div class="modal fade" id="senate" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">SENATE</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Senate, a keynote event in Synapse, has grown out to be a
+                            sought
+                            after debating tournament in the national circuit . Senate has had an international
+                            core
+                            before and  holds the distinction of being the only debate tournament in Gujarat
+                            that has
+                            achieved international appreciation. Senate 2016 was a huge success with an
+                            outstanding
+                            adjudication core and prize money worth Rs. 1.5 lakh . Within just five years of its
+                            birth,
+                            it has reached an outstanding level and is recognised all over India for its quality
+                            of
+                            debates and we are just getting started! We promise that Senate 2017 will be even
+                            better.
+                        </p>
+                        <div style="text-align: center;">
+                            <h3 class="heading2">EVENT FORMAT</h3>
+                            <p class="lead min_padding">Format - 3v3 Asian Parliamentary.</p>
+                            <h3 class="heading2">RULES</h3>
+                            <p class="lead min_padding">Team Cap- 32<br>
+                                Institution Team Cap-4<br>
+                                N+1 rule follows for the number of adjudicators from each institution.<br>
+                            </p>
+                            <h3 class="heading2">CONTACT</h3>
+                            <p class="lead min_padding">
+                                Aarushi Sanghani : 9099080251<br>
+                                Aashay Binaykia : 8981641460 <br>
+                                Email : <b>senate.daiict@gmail.com</b>
+                            </p>
+                        </div>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="https://www.tinyurl.com/senate2017"
+                       target="_blank">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Shailee -->
+    <div class="modal fade" id="shailee" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">SHAILEE</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <h3 class="heading2">Writing Contest</h3>
+                        <p class="lead min_padding2">Writing your heart out and earning for it? That's the
+                            dream! So get
+                            your laptops and typewriters ready, because the hunt is on!<br>
+                            The topics for the contest will be announced soon and you'll be given a week's time
+                            and all
+                            the world's resources to fill your paper with the breathing of your heart. Pen down
+                            a story,
+                            an essay, a poem, a letter, a play or even an email if you want. Take the topic to a
+                            creative destination and be handsomely rewarded for it!
+                        </p>
+                        <h3 class="heading2">Spelling Bee</h3>
+                        <p class="lead min_padding2">Crack the spellings of a broad selection of beautiful words
+                            with
+                            varying level of difficulties as you go higher and higher in this unconventional
+                            spelling
+                            bee, watch out for some twists and turns along the way and win awesome prizes along
+                            with the
+                            satisfaction of showing off your skills! The event is sure to leave you
+                            'spell'-bound and
+                            asking for more towards the end.</p>
+                        <h3 class="heading2">Author's Session</h3>
+                        <p class="lead min_padding2">Formerly graced by the presence of the bestselling Indian
+                            author
+                            Ashwin Sanghi in the DA-IICT campus, this year, Shailee is back with yet another
+                            marvelous
+                            and once-in-a-lifetime opportunity to have a wonderful and worthwhile meet-and-greet
+                            with a
+                            famous bestselling author! Take in all the expert has to share and later have a book
+                            signed
+                            by them in your shelf!</p>
+                        <h3 class="heading2">Poetry Slam</h3>
+                        <p class="lead min_padding2">Shailee invites all the poets out there to exhibit their
+                            skills and
+                            engage with fellow poets in our poetry slam event. This is going to be a fun event
+                            which
+                            will be held in front of a live audience. So get ready to employ your creativity and
+                            relish
+                            some brilliant poetry. Also, don't forget there are goodies to be won!</p>
+                        <h3 class="heading2">Literature Quiz</h3>
+                        <p class="lead min_padding2">Do you take pride in knowing the authors of any book that
+                            your
+                            friend mentions?<br>
+                            Do you have famous quotes and lines at your fingertips?<br>
+                            Well, if the answers to the above question is yes, then Shailee presents to you the
+                            Literature Quiz, a perfect opportunity to battle it out with other litterateurs and
+                            win
+                            amazing prizes. The quiz will be held in two rounds, the preliminary or the
+                            elimination
+                            round and the final round.</p>
+                        <h3 class="heading2">Workshops</h3>
+                        <p class="lead min_padding2">Shailee has a few surprise events planned out just for you.
+                            We have
+                            a couple of experts from different fields to conduct hands-on workshops which are
+                            guaranteed
+                            to give you a fun learning experience. So hold on to your hats!
+                        </p>
+                    </div>
+                    <h3 class="heading2">CONTACT</h3>
+                    <p class="lead min_padding">
+                        Khushboo Chandwani : +91-9978806692<br>
+                        Anusha PhadniS : +91-9558721660 <br>
+                        Email : <b> shailee.synapse.daiict@gmail.com</b><br>
+                        For more information and updates, stay in touch! <br>Facebook:
+                        facebook.com/shaileesynapse <br>Website:
+                        shaileesynapse.wordpress.com<br></p>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Battledrome -->
+    <div class="modal fade" id="battledrome" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">BATTLEDROME</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">You are never too old for video games. Bring out the
+                            controllers,
+                            keep your thumbs rested and join the showdown for ultimate glory. Leave humility
+                            behind,
+                            this is war. Display great use of strategy, tactics and planning in a wide variety
+                            of the
+                            most engaging games. Test your skills at AOE, Counter Strike, DOTA, NFS Most Wanted
+                            and FIFA
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">DOTA 2</h2>
+                        <hr class="under_head">
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <p class="lead min_padding">Format : Winners-Losers Bracket<br>
+                            Game Mode : Captain’s Mode (5 v 5)<br>
+                            Game will start with a coin toss. The team which wins the toss will choose one of
+                            the two:
+                            Choose Radiant/Dire side of the map or first pick. <br>
+                        </p>
+                        <h3 class="heading2">RULES</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Only college students can participate in this event. Each team member must
+                                present their
+                                student ID card at the time of registration.
+                            </li>
+                            <li>One player will be allowed to play from only one team.
+                            </li>
+                            <li>If all the members of a team are not present at the time of their match then
+                                that team
+                                will be disqualified.
+                            </li>
+                            <li>Teams can bring one extra player for substitution, but substitution can only be
+                                made
+                                before the game starts. During the game, player substitution and exchange of
+                                seats will
+                                not be allowed.
+                            </li>
+                            <li>Pause/Resume Abuse: Pausing without any valid reason is disallowed. Resuming the
+                                game
+                                without the other team confirming that they are ready is not allowed either. If
+                                someone
+                                pauses the game without a valid reason, they will receive a warning.
+                            </li>
+                            <li>In-case any player is disconnected, the game will be paused until that player
+                                reconnects.
+                            </li>
+                            <li>In Dota, in case of server crash, new match will start with the same draft.</li>
+                            <li>Any form of cheating or exploitation of bugs is not allowed. The team using any
+                                cheats/bugs will be disqualified immediately.
+                            </li>
+                            <li>In case of any discrepancies the decision of the coordinators will be final and
+                                binding.
+                            </li>
+                            <li>Final match will be “BEST OF THREE MAPS”</li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Dheeraj : 7069137267<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">CS 1.6</h2>
+                        <hr class="under_head">
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Competition Method : 5 vs. 5 (Team Play, 5 players per team)</li>
+                            <li>Victory Condition: The first team to win 11 rounds is declared the winner. (16
+                                rounds
+                                from Quarter Finals onward )
+                            </li>
+                            <li>Official Maps: de_dust2, de_inferno , de_nuke and train.</li>
+                            <li>General Game Setting: Rounds: 30 Rounds (Max rounds format): Each Team plays 15
+                                rounds
+                                as Terrorists and 15 rounds as Counter-Terrorists.
+                            </li>
+                            <li>Round Time: 1 minute 45 seconds.</li>
+                            <li>C4 Timer: 35 seconds.</li>
+                            <li>Players are expected to bring their gaming accessories. (Keyboard,
+                                Mouse-optional)
+                            </li>
+                            <li>Any other use of map or program bugs can result in a warning at the minimum or
+                                loss by
+                                default for the offending team after deliberation and decision by the board of
+                                referees
+                                at its sole discretion.
+                            </li>
+                            <li>Basic configuration files(CFG) will be allowed with no illegal scripts.</li>
+                            <li>Final match will be “BEST OF THREE MAPS”</li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Akash : 9712581901<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">FIFA 14</h2>
+                        <hr class="under_head">
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <p class="lead min_padding">Knockout matches<br>
+                            Time-<b>6 min</b><br>
+                            Difficulty-world class<br>
+                            Tactical Defending
+                        </p>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Jay : 8866261069<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">NFS MW</h2>
+                        <hr class="under_head">
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li> Every match will be fought against 4 people.</li>
+                            <li>There will be two races in every match, one 3 lap race and one sprint.
+                            </li>
+                            <li>Players can also choose cars from the profile we will be giving them, that is,
+                                no custom
+                                profiles allowed.
+                            </li>
+                            <li>Cars should not exceed a certain top speed limit.
+                            </li>
+                            <li>No upgrades are allowed.
+                            </li>
+                            <li>The player with the minimum combined time of the two races wins and will proceed
+                                to the
+                                next round.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Divyanshu : 97140472529<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">AOE 2</h2>
+                        <hr class="under_head">
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <p class="lead min_padding">Each team will be having 2 players<br>
+                            If any problem arises during match, co-ordinator decision will be counted as final
+                            decision.<br>
+                            Game settings will be as per follow :<br>
+                        </p>
+                        <h3 class="heading2">GAME SETTINGS</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Map type: Random</li>
+                            <li>Map size: Medium(4 players)</li>
+                            <li>Difficulty: Standard</li>
+                            <li>Resources: Standard</li>
+                            <li>Population limit: 200</li>
+                            <li> Reveal map: Normal</li>
+                            <li>Starting age: Dark Age</li>
+                            <li>Victory: Conquest</li>
+                            <li>Game speed: Normal</li>
+                            <li>Lock Teams: Enabled</li>
+                            <li>Cheats: Disabled</li>
+                            <li>All tech: Disabled</li>
+                            <li>Record Game: Enable</li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Dhumil : 9512454059<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2 class="heading padding">MINI MILITIA</h2>
+                        <hr class="under_head">
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li> Each team contain 3 players.</li>
+                            <li>Pro pack version is not allowed and If caught team will be disqualified.</li>
+                            <li>Maps will be according to what the team decide.</li>
+                            <li>Each match will be of 6 mins.
+                            </li>
+                            <li>All matches are knock-out.
+                            </li>
+                            <li>In case of any conflicts, the decision of the coordinators will be final.</li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Kaustuk : 7405672274<br>
+                        </p>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Code_Mutants-->
+    <div class="modal fade" id="code_mutants" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">CODE MUTANTS</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Competitive coding is one of the best ways in which to
+                            exercise
+                            those gray cells. Solve as many brain teasers and mathematical problems as you can,
+                            using
+                            the best and the most efficient algorithms, with time being your biggest enemy. Do
+                            you think
+                            you can handle it all?</p>
+                    </div>
+                    <div class="container">
+                        <h3 class="heading2">RULES</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Only one round will be held on 16th February 2017
+                            </li>
+                            <li>Time: 9:30pm to 12:00am
+                            </li>
+                            <li>Event Site: Hackerearth (Link yet to be generated).
+                            </li>
+                        </ul>
+                        <h3 class="heading2">Event Guidelines (ACM Style Ranklist)</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>T You will be ranked on the basis of the score you get.
+                            </li>
+                            <li>In case of a tie, the rankings will be determined by the sum of the total time
+                                elapsed
+                                when
+                                you submitted the correct submission plus a penalty of 20 minutes for every
+                                rejected
+                                submission (Wrong answer, Time limit exceeded, Runtime Error) for a problem you
+                                solved.
+
+                            </li>
+                            <li>The total time is the time taken to solve a problem since the start of the
+                                contest.
+                            </li>
+                            <li>Getting Compilation Error does not contribute towards the 20 minute penalty.
+                            </li>
+                            <li> The time elapsed or penalty is not considered for any unsolved problem.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Dhruv Thakker:: 8469082293<br>
+                            Vineet Mehta: 7621023251<br>
+                            Email : <b>codemutants2k17@gmail.com</b>
+                        </p>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="https://hackerearth.com/codemutants/"
+                       target="_blank">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HeadRush-->
+    <div class="modal fade" id="headrush" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">HEADRUSH</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Want to give your grey cells some work out? Headrush is the
+                            place to
+                            be. With quizzes for all your interests, Headrush promises to be a bigger odyssey
+                            than the
+                            space one!
+                        </p>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Amarnath Karthi: 9724927481<br>
+                            Chahak Mehta: 7383689577
+                        </p>
+                        <br>
+                        <h5>Registration will be on the spot.</h5>
+                        <br>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Hip-hop street-->
+    <div class="modal fade" id="hip_hop_street" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/HipHop_Street.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">HIP-HOP STREET</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Hold your breathe as dancers illuminate the stage by
+                            exploring dance
+                            forms that showcase the richness of our pristine heritage; pay homage to
+                            time-honoured
+                            traditions. Decorate the stage with your elegance and grace.
+                        </p>
+                        <h3 class="heading2">RULES</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Participants should bring their sound tracks with themselves in mp3 or wav
+                                format either
+                                in a pen drive or cd. It won’t be organizers responsibility to provide
+                                assistance for
+                                the same.
+                            </li>
+                            <li>Required soundtrack should be submitted to us in the given format via mail 2
+                                days
+                                before.
+                            </li>
+                            <li>Props should be arranged by the participants themselves.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">TIME SLOT</h3>
+                        <p class="lead min_padding" style="text-align: left;">
+                            Time slots for Prelims performance: <br><br>
+                            Solo - 2-3 minutes<br>
+                            Group - 4-5 minutes<br><br>
+                            Time slots for Mains performance:<br><br>
+                            Solo - 4-5 minutes<br>
+                            Group - 6-7 minutes<br><br>
+                            Rules for Rapping and Beat Boxing:<br><br>
+                            Time slots for prelims - 3-4 minutes<br>
+                            Time slots for Mains - 4-5 minutes<br>
+                        </p>
+                        <h3 class="heading2">SOME REMINDER POINTS</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Participants are required to check the website frequently for any changes in the
+                                rules
+                                and regulations and specification of arena of the event.
+                            </li>
+                            <li>Practice: The teams/individuals must bring their own music system for practice.
+                                The
+                                organizing team is not responsible for providing either space or music system
+                                for
+                                practice.
+                            </li>
+                            <li>In case of any issues, coordinators and judge´s decision will be final and
+                                binding.
+                            </li>
+                            <li>One member of the team should sit with sound technician or computer operator.
+                            </li>
+                            <li>The CD should include details about the team name and college name also written
+                                on the
+                                CD.
+                            </li>
+                            <li>In case of any ambiguity the coordinators decisions will be final.
+                            </li>
+                            <li>The props to be used should be pre-informed about, before the prelims to the
+                                coordinators.
+                            </li>
+                            <li>Equipment we consider hazardous (such as fire, smoke, fog devices, knives,
+                                water) are
+                                not allowed.
+                            </li>
+                        </ul>
+                        <br>
+                        <h5>Kindly carry your college ID. Any participant that fails to do so may be prevented
+                            from
+                            participating.
+                        </h5><br>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Nikisha Patel: 9978212666<br>
+                            Mit Goti: 9537900066
+                        </p>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Nach-->
+    <div class="modal fade" id="naach" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Nach.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">NAACH</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Hold your breathe as dancers illuminate the stage by exploring dance
+                            forms that showcase the richness of our pristine heritage; pay homage to time-honoured
+                            traditions. Decorate the stage with your elegance and grace.
+                        </p>
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>There are no participation charges.
+                            </li>
+                            <li>Time duration for performances: (Maximum Time Limit)
+                                <ul>
+                                    <li>Solo.....5 Minutes</li>
+                                    <li>Duet.....7 Minutes</li>
+                                    <li>Group....10 Minutes</li>
+                                </ul>
+                            </li>
+                            <li>There is no restriction on the song as long as the dance forms are classical, semi
+                                classical, or folk
+                            </li>
+                            <li>For group performance maximum size of each group is 15 (Maximum).</li>
+                            <li>Depending on number of participants there may be a preliminary round of which
+                                participants will be informed in advance.
+                            </li>
+                            <li>There may be changes in the event format for which participants will be informed in
+                                advance.
+                            </li>
+                            <li>All the participants need to report at the informed time if not told otherwise.
+                                Participants arriving late shall not be entertained.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">SOUNDTRACK</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>No live soundtrack or projection is allowed.
+                            </li>
+                            <li> Teams must send their FINAL soundtrack through mail at least before 1 week. Subject of
+                                the mail should be Naach Soundtrack [Team Name].
+                            </li>
+                            <li>Soundtrack must meet the time limit constraints.
+                            </li>
+                            <li>Soundtrack once submitted is not subject to any changes.</li>
+                            <li>Soundtrack must be in MP3 format.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">PROPS</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Props must be arranged by the participants only.
+                            </li>
+                            <li> Participants should inform co-ordinators about the props at least 3 days before the
+                                performance.
+                            </li>
+                            <li>Hazardous props such as fire, smoke, fog devices, knives, water etc. are not allowed.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">GENERAL</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Participants are required to check the website frequently for any changes in the rules
+                                and regulations and specification of arena of the event.
+                            </li>
+                            <li> Participants must bring their college ID cards.
+                            </li>
+                            <li>For practice teams must bring their own music systems for practice. Co-ordinators are
+                                not responsible for providing either space or music system for practice.
+                            </li>
+                            <li>In case of any issues, coordinators and judge´s decision will be final.
+                            </li>
+                            <li>One member of the team should coordinate with sound technician or computer operator.
+                            </li>
+                            <li> In case of any ambiguity the co-ordinators’ decisions will be final.</li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Prithvi Patel : 7359084811<br>
+                            Brinda Jena : 7227895355
+                        </p>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Rhapsody-->
+    <div class="modal fade" id="rhapsody" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">RHAPSODY</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">Lose yourself behind in the magical atmosphere as you are
+                            taken on a
+                            symphonic ride. Show off your skills with your melodious voice, harmonious
+                            instruments and
+                            favourite tunes.</p>
+
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <p class="lead min_padding2">Two day event which includes 5 categories:<br> 
+                            Indian Solo<br>
+                            Indian group<br>
+                            Western solo<br>
+                            Western group<br>
+                            Instrumental<br><br>
+                            Day-1: Western Solo, Western Group and Instrumental <br>
+                            Day-2: Indian Solo and Indian Group <br>
+                            On each of the two days, Prelims shall be conducted from 8.30 am-1 pm, Final round shall be
+                            conducted from 2pm onwards.
+                        </p>
+                        <h3 class="heading2">RULES</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Solo performance shall be allotted 2 minutes for each performance in the Prelims round
+                                and 4
+                                minutes for each performance in the Final round (inclusive of the time for setting).
+                            </li>
+                            <li>Group performances shall be allotted 5 minutes for each performance in the Prelims round
+                                and
+                                7
+                                minutes for each performance in the Final round (inclusive of the time for setting).
+                                One team can have a maximum of 20 members. 
+                            </li>
+                            <li>Instrumental performances shall be allotted 5 minutes in both the rounds (inclusive of
+                                the
+                                time for setting).
+                            </li>
+                            <li>Time constraints shall be maintained strictly.
+                            </li>
+                            All the instruments required shall be brought by the contestants only (Excluding drums).
+                            Negative points exceeding the time limit.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">JUDGING CRITERIA</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>All the contestants who have registered for the event shall be performing in the Prelims
+                                round, out of which only a few of them will enter the Final round. (Based on the
+                                decision of
+                                the judges).
+                                <ul>
+                                    <li>Solo Performances: 10 performances shall make out to the Finals. (tentative)
+                                    </li>
+                                    <li>Group Performances: 8 performances shall make out to the Finals. (tentative)
+                                    </li>
+                                    <li>Instrumental Performances: 6 performances shall make out to the Finals.
+                                        (tentative)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Umesh: 7227895595<br>
+                            Madhumitha: 7203845345
+                        </p>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footloose-->
+    <div class="modal fade" id="footloose" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"
+                            style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Footloose.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">FOOTLOOSE</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <div class="container large-padding">
+                            <p class="lead min_padding">“Nobody cares if you can't dance well. Just get up and dance.
+                                Great dancers are great because of their passion.”
+                                ― Martha Graham</p>
+                            <h3 class="heading2">Prelims</h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>Registered contestants have to report with their soundtracks.
+                                </li>
+                                <li>Time limit 
+                                    <ul>
+                                        <li>Solo: 2 minutes</li>
+                                        <li>Duet: 3 minutes </li>
+                                        <li>Group: 4 minutes</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3 class="heading2">Music</h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>No live music or projection is allowed.
+                                </li>
+                                <li>Teams should bring music or songs (in MP3 or WAV format) that they want to use for
+                                    their performance on a Data CD or Hard drive or Pen Drive or they can even mail the
+                                    soundtrack with the details of the team on sfootloose17@gmail.com.
+                                </li>
+                                <li>It is recommended that they bring at least 2 copies one for submission and the other
+                                    for practice and also as a backup. Audio cassettes are not allowed.
+                                </li>
+                                <li>The music piece that the teams /individuals perform in the preliminary round must be
+                                    a part of the main performance. (It means that the music that is to be used in main
+                                    performance must be edited in a suitable manner to fit the time limits). Moreover
+                                    this music piece should be a continuous piece from the original soundtrack. This
+                                    music (in MP3 or WAV format) for preliminary round must also be given in a separate
+                                    Data CD or Hard Disk or a Pen Drive or can be mailed to sfootloose17@gmail.com.
+                                </li>
+                                <li>The music that is submitted for the performance should be within the time limits
+                                    .The organizing team will not provide any assistance regarding the same.
+                                </li>
+                                <li>The final music once submitted before the prelims is not subjected to any changes.
+                                </li>
+                                <li>Required sound track must be submitted in MP3 format at least 4 hours before the
+                                    performance in Hard Disk or pen drive.
+                                </li>
+                                <li>The final sound track should be mailed 3 days before the main event. </li>
+                            </ul>
+
+                            <h3 class="heading2">Props</h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>Props will have to be arranged by the participants themselves (unless mentioned
+                                    otherwise).The props must come on with the performance and must not require
+                                    extensive setup.
+                                </li>
+                                <li>The props to be used should be pre informed about before the prelims to the
+                                    coordinators. In case of any ambiguity the coordinators decisions will be final.
+                                </li>
+                                <li>Equipment we consider hazardous (such as fire, smoke, fog devices, knives, water)
+                                    are not allowed.
+                                </li>
+                                <li>In case any extra Stage arrangement is required please give prior notification at
+                                    least 10 -15 days before the event. 
+                                </li>
+                            </ul>
+                            <h3 class="heading2">Dance</h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>Classical or folk dancing or pure hip-hop is not allowed. 
+                                </li>
+                                <li>You have to prepare your dance within the below specified time limits. 
+                                    <ul>
+                                        <li>Solo: Time limit: 5 minutes (including setup)</li>
+                                        <li>Dance Duo: Time limit: 6 minutes (including setup)</li>
+                                        <li>Group: Team size for group category : 8-15 <br>
+                                            Time Limit : 9 minutes (including setup)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>We also have an in prompt round for Group category where teams will be asked to
+                                    perform on a music clip given to them on stage. No time for preparation will be
+                                    given to the teams. 
+                                    <br>
+                                    Time limit: 2 minutes
+                                </li>
+                                <li>It is compulsory for the contestants participating in the duet category to perform
+                                    together the whole time.
+                                </li>
+                                <li>It is compulsory for the contestants of group category to have at least one male and
+                                    one female member in costume and the same is recommended (not compulsory) for the
+                                    contestants of solo and duet category. 
+                                </li>
+                            </ul>
+                            <h3 class="heading2">General</h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>No limit on number of teams from a college. Top 5 teams will be picked up from each
+                                    category. 
+                                </li>
+                                <li>Participants are required to check the website frequently for any changes in the
+                                    rules and regulations and specification of arena of the event. 
+                                </li>
+                                <li>Practice: The teams/individuals must bring their own music system for practice. The
+                                    organizing team is not responsible for providing either space or music system for
+                                    practice. 
+                                </li>
+                                <li>In case of any issues, coordinators and judge’s decision will be final and binding. 
+                                </li>
+                                <li>One member of the team should sit with sound technician or computer operator. 
+                                </li>
+                                <li>The CD should include details about the team name and college name also written on
+                                    the CD. 
+                                </li>
+                                <li>Teams who have videos of their past performances are recommended to attach a YouTube
+                                    link of the same while registration. These videos under no circumstances will be
+                                    used for selection/elimination or any judgement criteria. 
+                                </li>
+                            </ul>
+                            <h3 class="heading2">Judgment Criteria </h3>
+                            <ul class="lead min_padding" style="text-align:left;">
+                                <li>Choreography
+                                </li>
+                                <li>Power Moves 
+                                </li>
+                                <li>Synchronization
+                                </li>
+                                <li>Stage utilization 
+                                </li>
+                                <li>Energy level  
+                                </li>
+                                <li>Costumes 
+                                </li>
+                                <li>Overall impact
+                                </li>
+                            </ul>
+                            <h3 class="heading2">CONTACT</h3>
+                            <p class="lead min_padding">
+                                Unnati: +91-8140071502<br>
+                                Saumya: +91-7574852042
+                            </p>
+                        </div>
+                    </div>
+                    <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Rampage Modal-->
+    <div class="modal fade" id="rampage" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" style="font-size: 3em;">&times;</button>
+                    <div style="background-image: url(assets/images/Event_Cover/Cover.jpg);background-size: 100% 100%; padding-top: 200px; padding-bottom: 150px;margin: -20px;">
+                        <h1 class="heading_white">RAMPAGE</h1>
+                    </div>
+                    <div class="container large-padding">
+                        <h2 class="heading padding">DESCRIPTION</h2>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding">They say creativity comes in several contrasting shades - of
+                            colours, of moods, of things far beyond reality. And when these very contrasts are unveiled
+                            on stage, all eyes will be drawn. Be the witness to a night of vogue and glamour on the
+                            ramp!<br>
+                            Welcome to Rampage 2017. Think bold, think sharp, think contrasts. <br>
+                            Theme: <b>"50 Shades of.."</b><br>
+                        </p>
+                        <h3 class="heading2">EVENT FORMAT</h3>
+                        <p class="lead min_padding2">
+                            Team Event<br>
+                            Individual Participation
+                        </p>
+                        <h3 class="heading2">TEAM EVENT</h3>
+                        <hr class="under_head">
+                        <br>
+                        <p class="lead min_padding2">
+                        <h3 class="heading2">PRELIMS</h3>
+                        <p class="lead min_padding2">In case of time constraints and more registrations, there will be
+                            prelims for registered teams. Further details regarding this will be posted on
+                            synapse.daiict.ac.in
+                        </p>
+                        <h3 class="heading2">FINALE</h3>
+                        <p class="lead min_padding2">Main Round will be held on 24th February 2016. This would be
+                            between the short-listed teams from the Preliminary round.<br>
+                            Time Limit: 8-20 minutes<br>
+                            Team Size: 12-20 (including designer, choreographers and models)<br>
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h3 class="heading2">Music and Light</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>No live music or projection is allowed.
+                            </li>
+                            <li>Music should not contain any abusive or foul words.
+                            </li>
+                            <li>Teams are instructed to send the soundtrack/music to be used during their performance to
+                                the
+                                organizers through mail at least a week prior to the event.
+                            </li>
+                            <li>Teams should bring music or songs (in MP3 format) that they want to use for their
+                                performance on a pen drive and submit it at least 6 hours before the final performance.
+                            </li>
+                            <li>It is recommended that they bring at least 2 copies : one for submission and the other
+                                for
+                                practice and also as a backup. Audio cassettes are not allowed.
+                            </li>
+                            <li>The music that is submitted for the performance should be within the time limits. The
+                                organizing team will NOT PROVIDE any assistance regarding the same.
+                            </li>
+                            <li>The final music once submitted before the finals is not subjected to any changes.
+                            </li>
+                            <li>It would be best for the teams to inform the organizers of their light requirements in
+                                advance.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">Props</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Props will have to be arranged by the participants themselves.
+                            </li>
+                            <li>The props must come on with the performance and must not require extensive setup.
+                            </li>
+                            <li>Teams are suggested to inform the organizers of any kind of props they are planning to
+                                use.
+                            </li>
+                            <li>Use of water, fire, pets or any hazardous materials (such as smoke, fog devices, knives)
+                                is
+                                not allowed. Teams are instructed to consult the organizers before using any such
+                                material.
+                                They will be allowed to use them only if the organisers agree.
+                            </li>
+                        </ul>
+                        <h3 class="heading2">General Points</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Participants are required to check the website frequently for any changes in the rules
+                                and
+                                regulations and specification of arena of the event.
+                            </li>
+                            <li>The teams must bring their own music system for practice. The organizing team is not
+                                responsible for providing either space or music system for practice.
+                            </li>
+                            <li>Makeup and styling of the models are to be done by the team themselves. We will only
+                                provide
+                                every team with dressing room.
+                            </li>
+                            <li>One member of the team should sit with sound technician or computer operator during the
+                                performance.
+                            </li>
+                            <li>The pen drive should include details about the team name and college name.
+                            </li>
+                            <li>Teams can ask for assistance from people outside the college such as choreographers,
+                                make-up
+                                artists, but these professionals will not be considered to be a part of the team.
+                            </li>
+                            <li>We request to maintain the decorum of the event. Vulgarity of any kind would lead to
+                                disqualification of the team from the event. Hence, if the team feels that any stunt or
+                                costume design can be considered as vulgar, it is strongly advised to consult the
+                                organizers
+                                before performing it on stage. The decision of the organizers will be final in case of
+                                any
+                                disputes arising due to this.
+                            </li>
+                            <li>No animals or birds should be harmed in the making the designs. Doing so will lead to
+                                immediate disqualification.
+                            </li>
+                            <li>In case of any issues, coordinators and judge's decision will be final and binding.
+                            </li>
+                        </ul>
+                        <br>
+                        <h3 class="heading2">INDIVIDUAL PARTICIPATION</h3>
+                        <hr class="under_head">
+                        <br>
+                        <h3 class="heading2">PRELIMS</h3>
+                        <p class="lead min_padding2">In case of time constraints and more registrations, there will be
+                            prelims for registered participants. Further details regarding this will be posted on
+                            synapse.daiict.ac.in
+                        </p>
+                        <h3 class="heading2">Finale</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Main Round will be held on 24th February 2016. This would be between the short-listed
+                                models from the Preliminary round.
+                            </li>
+                            <li>Time Limit: Not exceeding 3 min
+                            </li>
+                            <li>Team Size: Only 1 model
+                            </li>
+                        </ul>
+                        <h3 class="heading2">Judgment Criteria</h3>
+                        <ul class="lead min_padding" style="text-align:left;">
+                            <li>Walk and poise
+                            </li>
+                            <li>Confidence and gesture of the model
+                            </li>
+                            <li>Overall impact on the judges and crowd.
+                            </li>
+                        </ul>
+                        <h5>In case of any ambiguity the coordinators’ decisions will be final.
+                        </h5><br>
+                        <h5>Bring College ID of each of the team members without fail.
+                        </h5>
+                        <br>
+                        <h3 class="heading2">CONTACT</h3>
+                        <p class="lead min_padding">
+                            Smriti Sharma: +91 9726725016<br>
+                            Rahi Sheth: +91 8758593304<br>
+                        </p>
+                        <div>
+                            <a type="button" class="btn btn-secondary" href="register.html">Register</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="assets/amplitudeJS/js/amplitude.js"></script>
 <script src="assets/tether/tether.min.js"></script>
