@@ -49,7 +49,8 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
           "SY17E013": {},
           "SY17E014": {},
           "SY17E015": {},
-          "SY17E016": {}
+          "SY17E016": {},
+          "SY17E017": {}
       };
   }
 

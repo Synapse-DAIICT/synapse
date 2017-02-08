@@ -440,7 +440,7 @@
                     <div class="center-block" style="width:300px;text-align: left">
                         <div class="form-group">
                             <label class="lead min_padding">Team Name :</label>
-                            <input type="number" class="form-control" required ng-model="eventsFormData.SY17E016.teamSize">
+                            <input type="text" class="form-control" required ng-model="eventsFormData.SY17E016.teamSize">
                         </div>
                         <div class="form-group">
                             <label class="lead min_padding">Member 1 :</label>
@@ -482,11 +482,11 @@
                             <input type="number" class="form-control" id="num" ng-model="eventsFormData.SY17E002.teamSize">
                         </div>
 
-                        <label>Indian Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
-                        <label>Indian group - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
-                        <label>Western solo - </label> <input type="checkbox" value="Author's_Session"><br><br>
-                        <label>Western group - </label> <input type="checkbox" value="Poetry_Slam"><br><br>
-                        <label>Instrumental - </label> <input type="checkbox" value="Literature_Quiz"><br><br>
+                        <label>Indian Solo - </label> <input type="checkbox" value="Indian Solo"><br><br>
+                        <label>Indian group - </label> <input type="checkbox" value="Indian Group"><br><br>
+                        <label>Western solo - </label> <input type="checkbox" value="Western Solo"><br><br>
+                        <label>Western group - </label> <input type="checkbox" value="Western Group"><br><br>
+                        <label>Instrumental - </label> <input type="checkbox" value="Instrumental"><br><br>
                     </div>
                     <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E002', 'Rhapsody')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal('#SY17E009')">Close</button>
@@ -585,9 +585,9 @@
                             <input type="number" class="form-control" id="num" ng-model="eventsFormData.SY17E011.teamSize">
                         </div>
 
-                        <label>Solo - </label> <input type="checkbox" value="Writing_Contest"><br><br>
-                        <label>Duet - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
-                        <label>Group - </label> <input type="checkbox" value="Author's_Session"><br><br>
+                        <label>Solo - </label> <input type="checkbox" value="Solo"><br><br>
+                        <label>Duet - </label> <input type="checkbox" value="Duet"><br><br>
+                        <label>Group - </label> <input type="checkbox" value="Group"><br><br>
                     </div>
                     <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E011', 'Footloose')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal('#SY17E009')">Close</button>
@@ -716,8 +716,8 @@
                             <label class="lead min_padding">Team Size :</label>
                             <input type="number" class="form-control" ng-model="eventsFormData.SY17E007.teamSize">
                         </div>
-                        <label>SNAPSHOT - </label> <input type="checkbox" value="Writing_Contest"><br><br>
-                        <label>CELLULOID - </label> <input type="checkbox" value="Spelling_Bee"><br><br>
+                        <label>SNAPSHOT - </label> <input type="checkbox" value="SNAPSHOT"><br><br>
+                        <label>CELLULOID - </label> <input type="checkbox" value="CELLULOID"><br><br>
                     </div>
                     <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E007', 'Surge')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal('#SY17E009')">Close</button>
@@ -750,6 +750,33 @@
                     </div>
                     <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E009', 'Hip-Hop-Street')">Register</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal('#SY17E009')">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ACCOMODATION-->
+    <div class="modal fade" id="SY17E017" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="heading padding">ACCOMMODATION</h2>
+                    <hr class="under_head">
+                    <br>
+                    <div class="center-block" style="width:300px;text-align: left">
+                        <div class="form-group">
+                            <label class="lead min_padding">Team Size :</label>
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E017.teamSize">
+                        </div>
+                        <div class="form-group">
+                            <label class="lead min_padding">Number of Days : </label>
+                            <input type="text" class="form-control" ng-model="eventsFormData.SY17E017.Days">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" ng-click="registerEvent('SY17E017', 'ACCOMMODATION')">Register</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeModal('#SY17E017')">Close</button>
                 </div>
             </div>
 
