@@ -101,7 +101,7 @@
     <hr class="under_head">
     <br>
     <div class="center-block" style="width: 300px;text-align: left;" ng-controller='RegisterController'>
-        <form>
+        <form name='registrationForm'>
             <div class="form-group">
                 <label class="lead min_padding" for="usr">Name :</label>
                 <input type="text" class="form-control" id="usr" required ng-model='participant.name'>
@@ -122,7 +122,7 @@
             <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
                 {{error}}
             </div>
-            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()'>
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()' ng-disabled='registrationForm.$invalid'>
                 Register
             </button>
             <br>

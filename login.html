@@ -102,7 +102,7 @@
     <hr class="under_head">
     <br>
     <div class="center-block" style="width: 300px;text-align: left;">
-        <form>
+        <form name='loginForm'>
             <div class="form-group">
                 <label class="lead min_padding" for="email">Email :</label>
                 <input type="email" class="form-control" id="email" required ng-model='user.email'>
@@ -111,7 +111,7 @@
             <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
                 {{error}}
             </div>
-            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-disabled='loading'
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-disabled='loading || loginForm.$invalid'
                     ng-click='login()'>Login
             </button>
             <br>
