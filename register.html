@@ -106,7 +106,7 @@
     <hr class="under_head">
     <br>
     <div class="center-block" style="width: 300px;text-align: left;" ng-controller='RegisterController'>
-        <form>
+        <form name='registrationForm'>
             <div class="form-group">
                 <label class="lead min_padding" for="usr">Name :</label>
                 <input type="text" class="form-control" id="usr" required ng-model='participant.name'>
@@ -127,7 +127,7 @@
             <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
                 {{error}}
             </div>
-            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()'>
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-click='register()' ng-disabled='registrationForm.$invalid'>
                 Register
             </button>
             <br>
@@ -187,19 +187,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC6p0APHD1XjE7HbDhV3aWg0Eqo4RbLXjk",
-        authDomain: "synapse-2aadf.firebaseapp.com",
-        databaseURL: "https://synapse-2aadf.firebaseio.com",
-        storageBucket: "synapse-2aadf.appspot.com",
-        messagingSenderId: "87001485842"
-    };
-    firebase.initializeApp(config);
-</script>
-
+<script src="assets/firebase/firebase.js"></script>
 <script src="assets/Javascript/app.js" charset="utf-8"></script>
 <script src="assets/Javascript/email.js" charset="utf-8"></script>
 <script src="assets/Javascript/register.js" charset="utf-8"></script>
