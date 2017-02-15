@@ -10,25 +10,28 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
   $scope.getEventList = function() {
 
-    if (!$cookies.get('email')) {
-      window.location.href = 'login.html'
-    }
-
     $scope.loading = true;
 
-    DashboardService.getParticipantDetails().then(function(response) {
-      $scope.participant = response;
-      $scope.participantEvents = response.events;
-      return DashboardService.getEventList();
-    }).then(function(response) {
-      $scope.loading = false;
-      $scope.events = response;
-      $scope.dashboardLoaded = true;
-    }).catch(function(err) {
-      $scope.loading = false;
-      console.log(err);
-    });
+    firebase.auth().onAuthStateChanged(user => {
 
+      if (!user) {
+        window.location.href = 'login.html'
+      } else {
+
+        DashboardService.getParticipantDetails().then(function(response) {
+          $scope.participant = response;
+          $scope.participantEvents = response.events;
+          return DashboardService.getEventList();
+        }).then(function(response) {
+          $scope.loading = false;
+          $scope.events = response;
+          $scope.dashboardLoaded = true;
+        }).catch(function(err) {
+          $scope.loading = false;
+          console.log(err);
+        });
+      }
+    });
 
   }
 
@@ -62,7 +65,7 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
   var selectedCheckboxes = [];
 
   $scope.logoutUser = function() {
-    $cookies.remove('email');
+    firebase.auth().signOut();
     window.location.href = 'login.html';
   }
 

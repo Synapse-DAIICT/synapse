@@ -38,14 +38,21 @@ app.factory('AuthService', function($q, $firebaseArray) {
   function login(user) {
 
     var defer = $q.defer();
-    var list = $firebaseArray(ref);
 
-    list.$ref().orderByChild('email')
+    firebase.auth().signInAnonymously().then(response => {
+
+      var list = $firebaseArray(ref);
+
+      list.$ref().orderByChild('email')
       .startAt(user.email)
       .endAt(user.email)
       .on('value', function(snapshot) {
         defer.resolve(snapshot.val());
       });
+
+    }).catch(err => {
+      defer.reject(err);
+    });
 
       return defer.promise
 
