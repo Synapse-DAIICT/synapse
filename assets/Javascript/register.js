@@ -22,7 +22,7 @@ app.controller('RegisterController', function($scope, RegisterService, EmailServ
 
 });
 
-app.factory('RegisterService', function($firebaseArray) {
+app.factory('RegisterService', function($firebaseArray, $q) {
 
   var ref = firebase.database().ref().child('participants');
 
@@ -31,8 +31,17 @@ app.factory('RegisterService', function($firebaseArray) {
   };
 
   function register(participant) {
-    var data = $firebaseArray(ref);
-    return data.$add(participant);
+
+    var defer = $q.defer();
+
+    firebase.auth().signInAnonymously().then(response => {
+      var data = $firebaseArray(ref);
+      defer.resolve(data.$add(participant));
+    }).catch(err => {
+      defer.reject(err);
+    });;
+
+    return defer.promise;
   }
 
 });
