@@ -57,8 +57,7 @@
                         id="exCollapsingNavbar">
                         <li class="nav-item"><a class="nav-link link" href="index.html">HOME</a></li>
                         <li class="nav-item"><a class="nav-link link" href="event.html">EVENTS</a></li>
-                        <li class="nav-item"><a class="nav-link link" href="contact_us.html">CONTACT US</a></li>
-                        <!--<li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li> -->
+                        <li class="nav-item"><a class="nav-link link" href="sponsor.html">SPONSORS</a></li>
                         <li class="nav-item"><a class="nav-link link" href="register.html">REGISTER</a></li>
                         <li class="nav-item"><a class="nav-link link"
                                                 style="border: #1098F7 solid 2.5px;padding: 10px;background-color:#1098F7;color: white;border-radius: 22px;"
@@ -116,7 +115,8 @@
             <div class="text-danger" ng-if='error' style="text-align:center; padding: 20px;">
                 {{error}}
             </div>
-            <button type="button" style="width: 200px;" class="btn btn-primary center-block" ng-disabled='loading || loginForm.$invalid'
+            <button type="button" style="width: 200px;" class="btn btn-primary center-block"
+                    ng-disabled='loading || loginForm.$invalid'
                     ng-click='login()'>Login
             </button>
             <br>
@@ -127,16 +127,17 @@
 <div class="footer1" style="text-align: left;">
     <div class="container-fluid" style="margin-left: -25px;">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-7 col-md-12">
                 <a class="footer-link" href="Campus_Ambassador.html">CAMPUS AMBASSADOR</a>
                 <a class="footer-link"
                    href="https://drive.google.com/file/d/0B0dt8eWTvob6UlNuS3FwT2VsR28/view">TRAILER</a>
                 <a class="footer-link"
                    href="https://drive.google.com/open?id=0B0dt8eWTvob6SmY1am9NeDJCSzQ">BROCHURE</a>
                 <a class="footer-link" href="youth_run.html">YOUTH RUN</a>
+                <a class="footer-link" href="contact_us.html">CONTACT US</a>
                 <a class="footer-link" href="gallery.html">GALLERY</a>
             </div>
-            <div class="col-lg-2 col-lg-offset-4 col-md-12">
+            <div class="col-lg-2 col-lg-offset-3 col-md-12">
                 <a href="https://www.youtube.com/user/SynapseDAIICT" target="_blank"><i
                         class="fa fa-youtube-play fa-lg footer-icon"
                         aria-hidden="true"></i></a>
@@ -150,37 +151,31 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-12 visible-lg">
-                <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
-                    <div class="col-lg-2">
-                        <img src="assets/images/logo.png" width="54" height="50" style="margin-left: 5px;">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-offset-5 col-lg-3 col-md-12 col-md-offset-0 visible-lg">
+            <div class="col-lg-12 col-md-12 visible-lg" style="padding-top: 10px;padding-bottom: 10px;">
+                <img src="assets/images/logo.png" class="center-block" width="54" height="50" >
             </div>
         </div>
     </div>
-</div>
 
-<script src="assets/web/assets/jquery/jquery.min.js"></script>
-<script src="assets/tether/tether.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/smooth-scroll/SmoothScroll.js"></script>
-<script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
-<script src="assets/dropdown/js/script.min.js"></script>
-<script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
-<script src="assets/jarallax/jarallax.js"></script>
-<script src="assets/theme/js/script.js"></script>
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+    <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+    <script src="assets/dropdown/js/script.min.js"></script>
+    <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <script src="assets/jarallax/jarallax.js"></script>
+    <script src="assets/theme/js/script.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
-<script src="assets/firebase/firebase.js"></script>
-<script src="assets/Javascript/app.js" charset="utf-8"></script>
-<script src="assets/Javascript/email.js" charset="utf-8"></script>
-<script src="assets/Javascript/login.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js"
+            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.min.js" charset="utf-8"></script>
+    <script src="assets/firebase/firebase.js"></script>
+    <script src="assets/Javascript/app.js" charset="utf-8"></script>
+    <script src="assets/Javascript/email.js" charset="utf-8"></script>
+    <script src="assets/Javascript/login.js" charset="utf-8"></script>
 
-<input name="animation" type="hidden">
+    <input name="animation" type="hidden">
 </body>
 </html>
