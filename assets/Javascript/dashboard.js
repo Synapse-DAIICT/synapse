@@ -12,26 +12,44 @@ app.controller('DashboardController', function($scope, jQuery, $cookies, Dashboa
 
     $scope.loading = true;
 
-    firebase.auth().onAuthStateChanged(user => {
+    if (!$cookies.get('email')) {
+      window.location.href = 'login.html'
+    } else {
 
-      if (!user) {
-        window.location.href = 'login.html'
-      } else {
+      DashboardService.getParticipantDetails().then(function(response) {
+        $scope.participant = response;
+        $scope.participantEvents = response.events;
+        return DashboardService.getEventList();
+      }).then(function(response) {
+        $scope.loading = false;
+        $scope.events = response;
+        $scope.dashboardLoaded = true;
+      }).catch(function(err) {
+        $scope.loading = false;
+        console.log(err);
+      });
+    }
 
-        DashboardService.getParticipantDetails().then(function(response) {
-          $scope.participant = response;
-          $scope.participantEvents = response.events;
-          return DashboardService.getEventList();
-        }).then(function(response) {
-          $scope.loading = false;
-          $scope.events = response;
-          $scope.dashboardLoaded = true;
-        }).catch(function(err) {
-          $scope.loading = false;
-          console.log(err);
-        });
-      }
-    });
+    // firebase.auth().onAuthStateChanged(user => {
+    //
+    //   if (!user) {
+    //     window.location.href = 'login.html'
+    //   } else {
+    //
+    //     DashboardService.getParticipantDetails().then(function(response) {
+    //       $scope.participant = response;
+    //       $scope.participantEvents = response.events;
+    //       return DashboardService.getEventList();
+    //     }).then(function(response) {
+    //       $scope.loading = false;
+    //       $scope.events = response;
+    //       $scope.dashboardLoaded = true;
+    //     }).catch(function(err) {
+    //       $scope.loading = false;
+    //       console.log(err);
+    //     });
+    //   }
+    // });
 
   }
 
