@@ -9,8 +9,6 @@ app.controller('RegisterController', function($scope, RegisterService, EmailServ
     EmailService.checkEmailExists($scope.participant.email).then(function() {
       return RegisterService.register($scope.participant);
     }).then(function(response) {
-      $scope.loading = false;
-      $cookies.put('email', $scope.participant.email);
       window.location.href = 'dashboard.html'
     }).catch(function(err) {
       console.log(err);
